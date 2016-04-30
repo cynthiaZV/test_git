@@ -3,3 +3,4 @@
 # test commit using GPG
 # test not using GPG
 # test revert 1
+# test revert 2
