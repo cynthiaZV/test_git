@@ -1,4 +1,4 @@
-just a conflict
+test pull rebase
 sadf
 x
 4
