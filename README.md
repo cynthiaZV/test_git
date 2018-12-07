@@ -51,7 +51,7 @@
       </th>
       <th align="center" style="width: 80px;">
         <a href="https://github.com/d2-projects">
-          <img src="https://avatars3.githubusercontent.com/u/40857578?s=200&v=4" style="max-width:100%;"><br>
+          <img src="https://avatars3.githubusercontent.com/u/40857578?s=80&v=4" style="max-width:100%;"><br>
           <sub><b>D2 Projects</b></sub><br>
           <sub>Vue/JavaScript</sub>
         </a><br>
