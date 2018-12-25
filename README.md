@@ -21,9 +21,11 @@
 🎉 最后 [HelloGitHub.com](https://hellogithub.com) 这个网站就诞生了 🎉
 
 
-## 往期回顾
-| :squirrel: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: | :snowman: |
-| ------- | ----- | ------------ | ------ | --------- |
+## 内容
+**每月 2️⃣8️⃣ 号**发布[最新一期](/content/32/HelloGitHub32.md)｜[贡献者列表](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md)
+
+| :squirrel: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: | :snowman: | :squirrel: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: | :snowman: |
+| ------- | ----- | ------------ | ------ | --------- | ------- | ----- | ------------ | ------ | --------- | --------- |
 | [第 32 期](/content/32/HelloGitHub32.md) | [第 31 期](/content/31/HelloGitHub31.md) | [第 30 期](/content/30/HelloGitHub30.md) | [第 29 期](/content/29/HelloGitHub29.md) | [第 28 期](/content/28/HelloGitHub28.md) | [第 27 期](/content/27/HelloGitHub27.md) | [第 26 期](/content/26/HelloGitHub26.md) | [第 25 期](/content/25/HelloGitHub25.md) | [第 24 期](/content/24/HelloGitHub24.md) |
 
 **每个月 :two::eight: 号发布最新一期**｜[贡献者列表](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md)
