@@ -15,7 +15,7 @@
 希望通过本项目能够有更多人加入到**开源社区**、回馈社区。让有趣、有价值的项目被更多的人发现、关注、参与、贡献。在参与这些项目的过程中，你将学习到**更多编程知识**📚 、**提高编程技巧**💻 、**找到编程的乐趣**🎮 。
 
 ## 内容
-**每月 28 号**发布[最新一期](/content/32/HelloGitHub32.md)｜[贡献者列表](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md) | [官网](https://hellogithub.com) 
+**每月 28 号**发布[最新一期](/content/32/HelloGitHub32.md)｜[贡献者列表](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md) | [官网](https://hellogithub.com)
 
 | :squirrel: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
 | ------- | ----- | ------------ | ------ | --------- |
@@ -27,7 +27,7 @@
 | [第 10 期](/content/10/HelloGitHub10.md) | [第 09 期](/content/09/HelloGitHub09.md) | [第 08 期](/content/08/HelloGitHub08.md) | [第 07 期](/content/07/HelloGitHub07.md) | [第 06 期](/content/06/HelloGitHub06.md) |
 | [第 05 期](/content/05/HelloGitHub05.md) | [第 04 期](/content/04/HelloGitHub04.md) | [第 03 期](/content/03/HelloGitHub03.md) | [第 02 期](/content/02/HelloGitHub02.md) | [第 01 期](/content/01/HelloGitHub01.md) |
 
-提 [issues](https://github.com/521xueweihan/HelloGitHub/issues/new) 自荐项目或分享有意思的项目。[安装分享插件](https://awesome.fairyever.com/article/chrome-extension.html)
+提 [issues](https://github.com/521xueweihan/HelloGitHub/issues/new) 自荐项目和分享有意思的项目，也可以安装[分享插件](https://awesome.fairyever.com/article/chrome-extension.html)推荐开源项目。
 
 
 ## 合作组织
