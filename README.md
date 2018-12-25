@@ -27,7 +27,7 @@
 | [第 10 期](/content/10/HelloGitHub10.md) | [第 09 期](/content/09/HelloGitHub09.md) | [第 08 期](/content/08/HelloGitHub08.md) | [第 07 期](/content/07/HelloGitHub07.md) | [第 06 期](/content/06/HelloGitHub06.md) |
 | [第 05 期](/content/05/HelloGitHub05.md) | [第 04 期](/content/04/HelloGitHub04.md) | [第 03 期](/content/03/HelloGitHub03.md) | [第 02 期](/content/02/HelloGitHub02.md) | [第 01 期](/content/01/HelloGitHub01.md) |
 
-提 [issues](https://github.com/521xueweihan/HelloGitHub/issues/new) 自荐项目和分享有意思的项目，也可以安装[分享插件](https://awesome.fairyever.com/article/chrome-extension.html)推荐开源项目。
+欢迎 [点击分享](https://github.com/521xueweihan/HelloGitHub/issues/new) 自己或发现的开源项目，同时安装 [分享插件](https://awesome.fairyever.com/article/chrome-extension.html) 随时推荐有趣的开源项目。
 
 
 ## 合作组织
