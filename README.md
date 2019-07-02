@@ -258,8 +258,8 @@ dropout(input_) # RETURNS: torch.FloatTensor (6x3x10)
 
 ---
 <p align="center">
-    “看完了，还不够？<a href='https://github.com/521xueweihan/HelloGitHub#%E5%86%85%E5%AE%B9'><往期内容></a> | 还不过瘾，那就看看每天更新的前端日报吧 <a href='https://daily.fairyever.com/'><今日前端></a>”<br>
-    如果你发现了好玩、有意义的开源项目 <a href='https://github.com/521xueweihan/HelloGitHub/issues/new'>点击这里</a> 分享你觉得有趣的项目。
+        <span align="left"></span>看完了，还不够？那就看看每天更新的前端日报吧 <a href='https://daily.fairyever.com/'><今日前端></a><span align="right"></span><br>
+
 </p>
 
 ## 公众号
