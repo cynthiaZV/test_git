@@ -258,7 +258,7 @@ dropout(input_) # RETURNS: torch.FloatTensor (6x3x10)
 
 ---
 <p align="center">
-        <span align="left"></span>看完了，还不够？那就看看每天更新的前端日报吧 <a href='https://daily.fairyever.com/'><今日前端></a><span align="right"></span><br>
+    **「上一期」**|那就看看每天更新的前端日报吧 <a href='https://daily.fairyever.com/'><今日前端></a>|**「下一期」**<br>
 
 </p>
 
