@@ -302,7 +302,7 @@ dropout(input_) # RETURNS: torch.FloatTensor (6x3x10)
 
 
 <p align="center">
-    {{ pre }} | <a href='https://github.com/521xueweihan/HelloGitHub/issues/new'>分享你觉得有趣的项目</a> | {{ last }}
+    [上一期](https://github.com/521xueweihan/HelloGitHub/blob/master/content/38/HelloGitHub38.md) | <a href='https://github.com/521xueweihan/HelloGitHub/issues/new'>分享你觉得有趣的项目</a> | 下一期
 </p>
 
 ---
