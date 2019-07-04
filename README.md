@@ -14,7 +14,7 @@ HTTP 状态码（英语：HTTP Status Code）是用以表示 HTTP 响应状态�
 这一类型的状态码，代表请求已被接受，需要继续处理。这类响应是临时响应，表示客户应该采取的其它行动。
 
 ### 100 Continue（继续）
-![](https://img.hellogithub.com/06/100.jpeg)
+![](https://img.hellogithub.com/06/100.jpg)
 
 服务器已经接收到请求头，请求者应当继续提出请求。服务器返回此代码表示已收到请求的第一部分，正在等待其余部分。
 
