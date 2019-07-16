@@ -1,237 +1,67 @@
-> 在我们日常 Web 开发中，或多或少的都接触过 HTTP 状态码，那这些状态码代表什么意思呢？如何熟记它们？熟记这些状态码又有什么好处呢？下面我就为大家一一道来，可以把本片文章‘收藏’以备不时之需。
-
-## HTTP 状态代码表示什么意思？
-HTTP 状态码（英语：HTTP Status Code）是用以表示 HTTP 响应状态的 3 位数字代码。比如：
-- 1xx：消息
-- 2xx：成功
-- 3xx：重定向
-- 4xx：客户端错误
-- 5xx：服务器错误
-
-熟记这些状态码可以让我们在快速定位 Web 开发中遇到的问题、编写符合规范的接口服务，那么下面就让我们看看这些死板的 3 位数字都是什么意思。撸猫爱好者，请注意：前方高能，屏住呼吸，一大波可爱的小猫咪即将来袭！
-
-## 一、1xx 消息
-这一类型的状态码，代表请求已被接受，需要继续处理。这类响应是临时响应，表示客户应该采取的其它行动。
-
-### 100 Continue（继续）
-![](https://img.hellogithub.com/06/100.jpg)
-
-服务器已经接收到请求头，请求者应当继续提出请求。服务器返回此代码表示已收到请求的第一部分，正在等待其余部分。
-
-### 101 Switching Protocols（切换协议）
-![](https://img.hellogithub.com/06/101.jpg)
-
-服务器已经理解了客户端的请求，并将通过 Upgrade 消息头通知客户端采用不同的协议来完成这个请求。在发送完这个响应后，服务器将会切换到在 Upgrade 消息头中定义的那些协议。
-
-只有在切换新的协议更好的进行通信。例如：切换到新的 HTTP 版本（如 HTTP/2）比旧版本更有优势、或切换到一个实时且同步的协议（如 WebSocket）等
-
-
-## 二、2xx 成功
-这一类型的状态码，代表请求已成功被服务器接收、理解、并接受。
-
-### 200 OK（成功）
-![](https://img.hellogithub.com/06/200.jpg)
-
-已成功处理了请求。出现此状态码是表示正常状态。
-
-### 201 Created（已创建）	
-![](https://img.hellogithub.com/06/201.jpg)
-
-请求成功并且服务器创建了新的资源。
-
-### 202 Accepted（已接受）
-![](https://img.hellogithub.com/06/202.jpg)
-
-服务器已接受请求，但尚未处理。
-
-### 203 Non-Authoritative Information（非授权信息）
-![](https://img.hellogithub.com/06/203.jpg)
-
-服务器已成功处理了请求，但返回的信息可能来自另一来源。
-
-### 204 No Content（无内容）
-![](https://img.hellogithub.com/06/204.jpg)
-
-服务器成功处理了请求，但没有返回任何内容。
-
-### 206 Partial Content（部分内容）	
-![](https://img.hellogithub.com/06/206.jpg)
-
-服务器成功处理了部分 GET 请求。
-
-## 三、3xx 重定向
-这类状态码代表需要客户端采取进一步的操作才能完成请求。通常，这些状态码用来重定向，后续的请求地址（重定向目标）在本次响应的 Location 域中指明。
-当且仅当后续的请求所使用的方法是 GET 或者 HEAD 时，用户浏览器才可以在没有用户介入的情况下自动提交所需要的后续请求。
-
-客户端应当自动监测无限循环重定向（例如：A->A，或者A->B->C->A），因为这会导致服务器和客户端大量不必要的资源消耗。按照 HTTP/1.0 版规范的建议，浏览器不应自动访问超过5次的重定向。
-
-### 300 Multiple Choices（多种选择）
-![](https://img.hellogithub.com/06/300.jpg)
-
-针对请求，服务器可执行多种操作。服务器可根据请求者选择一项操作，或提供操作列表供请求者选择。
-
-### 301 Moved Permanently（永久移动）
-![](https://img.hellogithub.com/06/301.jpg)
-
-请求的资源已永久移动到新位置。服务器返回此响应（对 GET 或 HEAD 请求的响应）时，会自动将请求者转到新位置。
-
-### 302 Move Temporarily（临时移动）
-![](https://img.hellogithub.com/06/302.jpg)
-
-请求的资源临时从不同的 URI 响应请求。由于这样的重定向是临时的，客户端应当继续向原有地址发送以后的请求。只有在 Cache-Control 或 Expires 中进行了指定的情况下，这个响应才是可缓存的。
-
-### 303 See Other（查看其他位置）
-![](https://img.hellogithub.com/06/303.jpg)
-
-对应当前请求的响应可以在另一个 URL 上被找到，而且客户端应当采用 GET 的方式访问那个资源。这个方法的存在主要是为了允许由脚本激活的 POST 请求输出重定向到一个新的资源。这个新的 URI 不是原始资源的替代引用。同时，303响应禁止被缓存。当然，第二个请求（重定向）可能被缓存。
-
-### 304 Not Modified（未修改）
-![](https://img.hellogithub.com/06/304.jpg)
-
-自从上次请求后，请求的资源未修改过。服务器返回此响应时，不会返回资源的内容，因此可节省带宽和开销。
-
-### 305 Use Proxy（使用代理）
-![](https://img.hellogithub.com/06/305.jpg)
-
-请求者只能使用代理访问请求的网页。如果服务器返回此响应，还表示请求者应使用代理。
-
-### 307 Temporary Redirect（临时重定向）
-![](https://img.hellogithub.com/06/307.jpg)
-
-服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来响应以后的请求。 此代码与响应 GET 和 HEAD 请求的 301 代码类似，会自动将请求者转到不同的位置，但您不应使用此代码来告诉搜索引擎爬虫某个页面或网站已经移动，因为搜索引擎爬虫会继续抓取原有位置并编制索引。
-
-## 四、4xx 客户端错误
-这类的状态码代表了客户端看起来可能发生了错误，妨碍了服务器的处理。
-
-
-### 400 Bad Request（错误请求）
-![](https://img.hellogithub.com/06/400.jpg)
-
-服务器不理解请求的语法。
-
-### 401 Unauthorized（未授权）
-![](https://img.hellogithub.com/06/401.jpg)
-
-请求要求身份验证。 对于需要登录的网页，服务器可能返回此响应。
-
-### 403 Forbidden（禁止）
-![](https://img.hellogithub.com/06/403.jpg)
-
-服务器拒绝请求。
-
-### 404 Not Found（未找到）
-![](https://img.hellogithub.com/06/404.jpg)
-
-服务器找不到请求的资源。 例如，对于服务器上不存在的资源经常会返回此代码。
-
-### 405 Method Not Allowed（方法禁用）
-![](https://img.hellogithub.com/06/405.jpg)
-
-禁用请求中指定的方法（HTTP METHOD）。
-
-### 406 Not Acceptable（不接受）
-![](https://img.hellogithub.com/06/406.jpg)
-
-请求的资源的内容特性无法满足请求头中的条件，因而无法生成响应实体，该请求不可接受。
-
-### 408 Request Timeout（请求超时）
-![](https://img.hellogithub.com/06/408.jpg)
-
-服务器等候请求时发生超时。
-
-### 409 Conflict（冲突）
-![](https://img.hellogithub.com/06/409.jpg)
-
-由于和被请求的资源的当前状态之间存在冲突，请求无法完成。
-
-### 410 Gone（已删除）
-![](https://img.hellogithub.com/06/410.jpg)
-
-如果请求的资源已永久删除，服务器就会返回此响应。 
-
-### 411 Length Required（需要有效长度）
-![](https://img.hellogithub.com/06/411.jpg)
-
-务器不接受不含有效内容长度标头字段的请求。
-
-
-### 412 Precondition Failed（未满足前提条件）
-![](https://img.hellogithub.com/06/412.jpg)
-
-服务器未满足请求者在请求中设置的其中一个前提条件。
-
-### 413 Request Entity Too Large（请求实体过大）
-![](https://img.hellogithub.com/06/413.jpg)
-
-服务器无法处理请求，因为请求实体过大，超出服务器的处理能力。
-
-### 414 Request-URI Too Long（请求的 URI 过长）
-![](https://img.hellogithub.com/06/414.jpg)
-
-请求的 URI（通常为网址）过长，服务器无法处理。
-
-
-### 415 Unsupported Media Type（不支持的媒体类型）
-![](https://img.hellogithub.com/06/415.jpg)
-
-请求的格式不受请求页面的支持。
-
-
-### 416 Requested Range Not Satisfiable（请求范围不符合要求）
-![](https://img.hellogithub.com/06/416.jpg)
-
-如果页面无法提供请求的范围，则服务器会返回此状态代码。
-
-### 417 Expectation Failed（未满足期望值）
-![](https://img.hellogithub.com/06/417.jpg)
-
-服务器未满足"Expect"请求头字段的要求。
-
-### 429 Too Many Requests（请求太频繁）
-![](https://img.hellogithub.com/06/429.jpg)
-
-用户在给定的时间内发送了太多的请求。旨在用于网络限速。
-
-
-### 431 Request Header Fields Too Large（请求头字段过大）
-![](https://img.hellogithub.com/06/431.jpg)
-
-服务器不愿处理请求，因为一个或多个头字段过大。
-
-
-## 五、5xx 服务器错误
-这类状态码代表了服务器在处理请求的过程中有错误或者异常状态发生，也有可能是服务器意识到以当前的软硬件资源无法完成对请求的处理。
-
-### 500 Internal Server Error（服务器内部错误）	
-![](https://img.hellogithub.com/06/500.jpg)
-
-服务器遇到错误，无法完成请求。
-
-### 502 Bad Gateway（错误网关）
-![](https://img.hellogithub.com/06/502.jpg)
-
-服务器作为网关或代理，从上游服务器收到无效响应。
-
-### 503 Service Unavailable（服务不可用）
-![](https://img.hellogithub.com/06/503.jpg)
-
-服务器目前无法使用（由于超载或停机维护）。 通常，这只是暂时状态。
-
-### 504 Gateway Timeout（网关超时）
-![](https://img.hellogithub.com/06/504.jpg)
-
-服务器作为网关或代理，但是没有及时从上游服务器收到请求。
-
-
-## 参考
-- 维基百科 HTTP 状态码
-- https://http.cat/
-
-## 最后
-![](https://img.hellogithub.com/website-qr.png)
-
-欢迎关注 HelloGitHub 公众号，您的每一个关注、留言、转载、点赞，都是对我们最大的鼓励和肯定！
-
-写完这篇文章我都想养只猫了，名字叫 “200”。
-
-欢迎留言写出你家猫的品种和你对他的爱称，我很好奇有没有给自己家猫起名叫 “404” 的小伙伴😂
+<p align="center">
+  <img src="https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/logo/readme.gif"/>
+  <br>中文 | <a href="README_en.md">English</a>
+  <br><strong>HelloGitHub</strong> 一个分享 GitHub 上有趣、入门级的开源项目。<br>兴趣是最好的老师，这里能够帮你找到编程的兴趣！
+</p>
+
+<p align="center">
+  <a href="https://hellogithub.com/weixin.png"><img src="https://img.shields.io/badge/Talk-%E5%BE%AE%E4%BF%A1%E7%BE%A4-brightgreen.svg?style=popout-square" alt="WeiXin"></a>
+  <a href="https://github.com/521xueweihan/HelloGitHub/stargazers"><img src="https://img.shields.io/github/stars/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub stars"></a>
+  <a href="https://github.com/521xueweihan/HelloGitHub/issues"><img src="https://img.shields.io/github/issues/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub issues"></a>
+</p>
+
+## 简介
+这是一个面向**编程新手**、**热爱编程**、**对开源社区感兴趣**人群的项目，内容以月刊的形式更新发布。内容包括：**流行项目**、**入门级项目**、**让生活变得更美好的工具**、**书籍**、**学习心得笔记**、**企业级项目**等，这些开源项目大多都是非常容易上手、很 Cool，能够让你用很短时间感受到编程的魅力和便捷。从而让大家感受到编程的乐趣，动手开始编程。
+
+希望通过本项目能够有更多人加入到**开源社区**、回馈社区。让有趣、有价值的项目被更多的人发现、关注、参与、贡献。在参与这些项目的过程中，你将学习到**更多编程知识**📚 、**提高编程技巧**💻 、**找到编程的乐趣**🎮 。
+
+## 内容
+**每月 28 号**发布[最新一期](https://github.com/521xueweihan/HelloGitHub/blob/master/content/last.md)｜[贡献者列表](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md) | [官网](https://hellogithub.com)| [推荐开源项目](https://github.com/521xueweihan/HelloGitHub/issues/new)
+
+| :squirrel: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
+| ------- | ----- | ------------ | ------ | --------- |
+| [第 39 期](/content/39/HelloGitHub39.md) | [第 38 期](/content/38/HelloGitHub38.md) | [第 37 期](/content/37/HelloGitHub37.md) | [第 36 期](/content/36/HelloGitHub36.md) |
+| [第 35 期](/content/35/HelloGitHub35.md) | [第 34 期](/content/34/HelloGitHub34.md) | [第 33 期](/content/33/HelloGitHub33.md) | [第 32 期](/content/32/HelloGitHub32.md) | [第 31 期](/content/31/HelloGitHub31.md) |
+| [第 30 期](/content/30/HelloGitHub30.md) | [第 29 期](/content/29/HelloGitHub29.md) | [第 28 期](/content/28/HelloGitHub28.md) | [第 27 期](/content/27/HelloGitHub27.md) | [第 26 期](/content/26/HelloGitHub26.md) |
+| [第 25 期](/content/25/HelloGitHub25.md) | [第 24 期](/content/24/HelloGitHub24.md) | [第 23 期](/content/23/HelloGitHub23.md) | [第 22 期](/content/22/HelloGitHub22.md) | [第 21 期](/content/21/HelloGitHub21.md) |
+| [第 20 期](/content/20/HelloGitHub20.md) | [第 19 期](/content/19/HelloGitHub19.md) | [第 18 期](/content/18/HelloGitHub18.md) | [第 17 期](/content/17/HelloGitHub17.md) | [第 16 期](/content/16/HelloGitHub16.md) |
+| [第 15 期](/content/15/HelloGitHub15.md) | [第 14 期](/content/14/HelloGitHub14.md) | [第 13 期](/content/13/HelloGitHub13.md) | [第 12 期](/content/12/HelloGitHub12.md) | [第 11 期](/content/11/HelloGitHub11.md) |
+| [第 10 期](/content/10/HelloGitHub10.md) | [第 09 期](/content/09/HelloGitHub09.md) | [第 08 期](/content/08/HelloGitHub08.md) | [第 07 期](/content/07/HelloGitHub07.md) | [第 06 期](/content/06/HelloGitHub06.md) |
+| [第 05 期](/content/05/HelloGitHub05.md) | [第 04 期](/content/04/HelloGitHub04.md) | [第 03 期](/content/03/HelloGitHub03.md) | [第 02 期](/content/02/HelloGitHub02.md) | [第 01 期](/content/01/HelloGitHub01.md) |
+
+可安装 [分享插件](https://www.fairyever.com/posts/d2-daily-chrome-extension/) 更便捷地推荐有趣的开源项目。
+
+## 公众号
+最近开了公众号，后续公众号会针对月刊推荐过的内容精选、梳理，做成系列的文章发布。月刊也会同时发布在公众号，便于第一时间阅读。
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/logo/weixin.png" style="max-width:70%;"><br>
+欢迎关注 HelloGitHub 公众号，获取更多开源项目的资料和内容。
+</p>
+
+## 合作组织
+欢迎各路:octocat:开源组织合作。[点击联系我](Mailto:595666367@qq.com)
+
+<table>
+  <thead>
+    <tr>
+      <th align="center" style="width: 80px;">
+        <a href="https://github.com/FGDBTKD">
+          <img src="https://avatars3.githubusercontent.com/u/40509403?s=80&v=4" style="max-width:100%;"><br>
+          <sub>FGDBTKD</sub><br>
+          <sub>AI/ML/DL/NLP</sub>
+        </a><br>
+      </th>
+      <th align="center" style="width: 80px;">
+        <a href="https://github.com/d2-projects">
+          <img src="https://avatars3.githubusercontent.com/u/40857578?s=80&v=4" style="max-width:100%;"><br>
+          <sub>D2 Projects</sub><br>
+          <sub>Vue/JavaScript</sub>
+        </a><br>
+      </th>
+    </tr>
+  </thead>
+</table>
+                    
+## 声明
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可。
