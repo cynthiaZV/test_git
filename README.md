@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/logo/readme.gif"/>
   <br><strong>HelloDjango-blog-tutorial</strong> <br>
   一个完全免费、开源的 Django 系列教程之博客开发<br>
-  带你从零开始一步步开发属于自己的博客网站，帮助你以最快的速度掌握 Django 开发的技巧。
+  带你从零开始一步步使用 Django 开发、创建属于自己的博客网站。
 </p>
 
 <p align="center">
