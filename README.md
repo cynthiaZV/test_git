@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/logo/readme.gif"/>
   <br><strong>HelloDjango-blog-tutorial</strong> <br>
-  一个完全免费、开源的 Django 系列教程之博客开发<br>
+  一个完全免费、开源的 **HelloDjango 系列教程之博客开发**。<br>
   带你从零开始一步步使用 Django 开发、创建属于自己的博客网站。
 </p>
 
@@ -11,10 +11,10 @@
   <a href="https://weibo.com/hellogithub"><img src="https://img.shields.io/badge/%E6%96%B0%E6%B5%AA-Weibo-red.svg?style=popout-square" alt="Sina Weibo"></a>
 </p>
 
-## 简介
+## 资源列表
 
 
-## 内容
+## 目录索引
 
 
 ## 公众号
