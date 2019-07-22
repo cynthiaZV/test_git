@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="https://hellogithub.com/weixin.png"><img src="https://img.shields.io/badge/Talk-%E5%BE%AE%E4%BF%A1%E7%BE%A4-brightgreen.svg?style=popout-square" alt="WeiXin"></a>
+  <a href="https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/logo/weixin.png"><img src="https://img.shields.io/badge/Talk-%E5%BE%AE%E4%BF%A1%E7%BE%A4-brightgreen.svg?style=popout-square" alt="WeiXin"></a>
   <a href="https://github.com/HelloGitHub-Team/HelloDjango-blog-tutorial/stargazers"><img src="https://img.shields.io/github/stars/HelloGitHub-Team/HelloDjango-blog-tutorial.svg?style=popout-square" alt="GitHub stars"></a>
   <a href="https://weibo.com/hellogithub"><img src="https://img.shields.io/badge/%E6%96%B0%E6%B5%AA-Weibo-red.svg?style=popout-square" alt="Sina Weibo"></a>
 </p>
@@ -17,7 +17,7 @@
 ## 内容
 
 
-## 我们在这里
+## 公众号
 <p align="center">
   <img src="https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/logo/weixin.png" style="max-width:70%;"><br>
 欢迎关注 HelloGitHub 公众号，获取更多开源项目的资料和内容。
