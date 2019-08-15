@@ -17,10 +17,11 @@
 希望通过本项目能够有更多人加入到开源社区、回馈社区。**让有趣、有价值的项目被更多人发现和加入**。在参与这些项目的过程中，你将得到：**热爱编程的小伙伴**🕺 、**更多编程知识**📚 、**优秀的编程技巧**💻 、**找到编程的乐趣**🎮 。
 
 **『HelloGitHub 每日精选』**，你可以通过关注我们的[最惨官微](https://weibo.com/hellogithub)获取每日更新。
-**『讲解开源项目系列』**，[点击查看创作须知](https://www.yuque.com/docs/share/ac165a31-927e-4c9a-8044-5a8e0de372e7)，欢迎开源项目的作者自荐开源爱好者给我们投稿、各路:octocat:开源组织合作。[点击联系我](Mailto:595666367@qq.com)
+
+**『讲解开源项目系列』**，[点击查看创作须知](https://www.yuque.com/docs/share/ac165a31-927e-4c9a-8044-5a8e0de372e7)，欢迎开源项目的作者自荐、开源爱好者给我们投稿。[点击联系我](Mailto:595666367@qq.com)
 
 ## 内容
-[推荐或自荐项目](https://github.com/521xueweihan/HelloGitHub/issues/new) | [贡献者列表](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md) | [官网](https://hellogithub.com) | [最惨官微](https://weibo.com/hellogithub)
+[推荐或自荐项目](https://github.com/521xueweihan/HelloGitHub/issues/new) | [官网](https://hellogithub.com) | [最惨官微](https://weibo.com/hellogithub)
 
 | :squirrel: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
 | ------- | ----- | ------------ | ------ | --------- |
@@ -33,7 +34,7 @@
 | [第 10 期](/content/10/HelloGitHub10.md) | [第 09 期](/content/09/HelloGitHub09.md) | [第 08 期](/content/08/HelloGitHub08.md) | [第 07 期](/content/07/HelloGitHub07.md) | [第 06 期](/content/06/HelloGitHub06.md) |
 | [第 05 期](/content/05/HelloGitHub05.md) | [第 04 期](/content/04/HelloGitHub04.md) | [第 03 期](/content/03/HelloGitHub03.md) | [第 02 期](/content/02/HelloGitHub02.md) | [第 01 期](/content/01/HelloGitHub01.md) |
 
-## 核心贡献者
+## 贡献者
 <table>
   <tbody>
     <tr>
@@ -88,6 +89,12 @@
         </a><br>
       </th>
       <th align="center" style="width: 80px;">
+        <a href="https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md">
+          <img src="https://avatars2.githubusercontent.com/u/10628772?s=50&v=4" style="width: 50px;"><br>
+          <sub>更多贡献者</sub>
+        </a><br>
+      </th>
+      <th align="center" style="width: 80px;">
         <a href="https://github.com/521xueweihan/HelloGitHub/issues/new">
           <img src="https://avatars2.githubusercontent.com/u/10628772?s=50&v=4" style="width: 50px;"><br>
           <sub>虚位以待</sub>
@@ -97,7 +104,10 @@
   </tbody>
 </table>
 
+
 ## 合作组织
+欢迎各种:octocat:开源组织合作。[点击联系我](Mailto:595666367@qq.com)
+
 <table>
   <thead>
     <tr>
