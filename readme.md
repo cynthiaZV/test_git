@@ -16,8 +16,8 @@
 
 希望通过本项目能够有更多人加入到开源社区、回馈社区。**让有趣、有价值的项目被更多人发现和加入**。在参与这些项目的过程中，你将得到：**热爱编程的小伙伴**🕺 、**更多编程知识**📚 、**优秀的编程技巧**💻 、**找到编程的乐趣**🎮 。
 
-- **『每日精选』**关注我们的[最惨官微](https://weibo.com/hellogithub)获取最新项目推荐。
-- **『讲解开源项目』**欢迎开源爱好者给我们投稿[查看创作须知](https://www.yuque.com/docs/share/ac165a31-927e-4c9a-8044-5a8e0de372e7)。
+- **『每日精选』** 关注我们的[最惨官微](https://weibo.com/hellogithub)获取最新项目推荐。
+- **『讲解开源项目』** 欢迎开源爱好者给我们投稿[查看创作须知](https://www.yuque.com/docs/share/ac165a31-927e-4c9a-8044-5a8e0de372e7)。
 
 ## 内容
 每月 28 号发布[最新一期](/content/last.md) | [推荐或自荐项目](https://github.com/521xueweihan/HelloGitHub/issues/new) |[最惨官微](https://weibo.com/hellogithub) | [贡献者列表](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md) | [官网](https://hellogithub.com) 
