@@ -89,7 +89,7 @@
       </th>
       <th align="center" style="width: 80px;">
         <a href="https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md">
-          <img src="https://avatars3.githubusercontent.com/u/10628772?s=50&v=4" style="width: 50px;"><br>
+          <img src="https://avatars1.githubusercontent.com/u/17665302?s=50&v=4" style="width: 50px;"><br>
           <sub>更多贡献者</sub>
         </a><br>
       </th>
