@@ -22,7 +22,7 @@
 ## 内容
 [最惨官微](https://weibo.com/hellogithub) | [贡献者列表](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md) | [官网](https://hellogithub.com) 
 
-每月 28 号发布[最新一期](/content/last.md)，欢迎[推荐项目](https://github.com/521xueweihan/HelloGitHub/issues/new)
+每月 28 号发布[最新一期](/content/last.md)，欢迎[推荐和自荐项目](https://github.com/521xueweihan/HelloGitHub/issues/new)
 
 | :squirrel: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
 | ------- | ----- | ------------ | ------ | --------- |
@@ -91,7 +91,7 @@
       </th>
       <th align="center" style="width: 80px;">
         <a href="https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md">
-          <img src="https://avatars2.githubusercontent.com/u/10628772?s=50&v=4" style="width: 50px;"><br>
+          <img src="https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/logo/benevocats.png?s=50&v=4" style="width: 50px;"><br>
           <sub>更多贡献者</sub>
         </a><br>
       </th>
