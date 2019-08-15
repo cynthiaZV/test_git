@@ -32,8 +32,10 @@
 | [第 10 期](/content/10/HelloGitHub10.md) | [第 09 期](/content/09/HelloGitHub09.md) | [第 08 期](/content/08/HelloGitHub08.md) | [第 07 期](/content/07/HelloGitHub07.md) | [第 06 期](/content/06/HelloGitHub06.md) |
 | [第 05 期](/content/05/HelloGitHub05.md) | [第 04 期](/content/04/HelloGitHub04.md) | [第 03 期](/content/03/HelloGitHub03.md) | [第 02 期](/content/02/HelloGitHub02.md) | [第 01 期](/content/01/HelloGitHub01.md) |
 
-## 贡献者
-**核心贡献者**
+## 贡献
+
+核心贡献者
+
 <table>
   <tbody>
     <tr>
@@ -97,41 +99,39 @@
   </tbody>
 </table>
 
-**合作组织**
+合作组织
 
 <table>
   <thead>
     <tr>
       <th align="center" style="width: 80px;">
         <a href="https://github.com/FGDBTKD">
-          <img src="https://avatars3.githubusercontent.com/u/40509403?s=80&v=4" style="max-width:100%;"><br>
-          <sub>FGDBTKD</sub><br>
-          <sub>AI/ML/DL/NLP</sub>
+          <img src="https://avatars3.githubusercontent.com/u/40509403?s=50&v=4" style="width: 50px;"><br>
+          <sub>FGDBTKD</sub>
         </a><br>
       </th>
       <th align="center" style="width: 80px;">
         <a href="https://github.com/d2-projects">
-          <img src="https://avatars3.githubusercontent.com/u/40857578?s=80&v=4" style="max-width:100%;"><br>
-          <sub>D2 Projects</sub><br>
-          <sub>Vue/JavaScript</sub>
+          <img src="https://avatars3.githubusercontent.com/u/40857578?s=50&v=4" style="width: 50px;"><br>
+          <sub>D2 Projects</sub>
         </a><br>
       </th>
       <th align="center" style="width: 80px;">
         <a href="https://github.com/doocs">
-          <img src="https://avatars1.githubusercontent.com/u/43716716?s=80&v=4" style="max-width:100%;"><br>
-          <sub>Doocs</sub><br>
-          <sub>Technical Knowledge</sub>
+          <img src="https://avatars1.githubusercontent.com/u/43716716?s=50&v=4" style="width: 50px;"><br>
+          <sub>Doocs</sub>
         </a><br>
       </th>
     </tr>
   </thead>
 </table>
-欢迎各路:octocat:开源组织合作。[点击联系我](Mailto:595666367@qq.com)
+
+HelloGitHub 推出了『开源项目深入讲解系列』[点击查看创作须知](https://www.yuque.com/docs/share/ac165a31-927e-4c9a-8044-5a8e0de372e7)，欢迎开源项目的作者自荐开源爱好者给我们投稿、各路:octocat:开源组织合作。[点击联系我](Mailto:595666367@qq.com)
 
 ## 公众号
 最近开了公众号，后续公众号会针对月刊推荐过的内容精选、梳理，做成系列的文章发布。月刊也会同时发布在公众号，便于第一时间阅读。
 
-HelloGitHub 推出了『开源项目深入讲解系列』[点击查看创作须知](https://www.yuque.com/docs/share/ac165a31-927e-4c9a-8044-5a8e0de372e7)，**欢迎开源项目的作者自荐、开源爱好者给我们投稿**。关注下面的公众号，直接发送“投稿”，并附上项目地址，我会回复您的消息的。
+
 
 希望 HG 这个平台能让好的项目被更多人了解、使用、参与。只要你的项目够好，HelloGitHub 会全力、无偿推荐。来联系我们吧！
 
