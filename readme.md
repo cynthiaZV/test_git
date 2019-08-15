@@ -16,13 +16,11 @@
 
 希望通过本项目能够有更多人加入到开源社区、回馈社区。**让有趣、有价值的项目被更多人发现和加入**。在参与这些项目的过程中，你将得到：**热爱编程的小伙伴**🕺 、**更多编程知识**📚 、**优秀的编程技巧**💻 、**找到编程的乐趣**🎮 。
 
-- 每日精选：你可以通过关注我们的[最惨官微](https://weibo.com/hellogithub)获取每日更新。
-- 讲解开源项目系列：[点击查看创作须知](https://www.yuque.com/docs/share/ac165a31-927e-4c9a-8044-5a8e0de372e7)，欢迎开源项目的作者自荐、开源爱好者给我们投稿。[点击联系我](Mailto:595666367@qq.com)
+- 每日精选——你可以通过关注我们的[最惨官微](https://weibo.com/hellogithub)获取每日更新。
+- 讲解开源项目系列——欢迎开源项目的作者、开源爱好者给我们投稿[点击查看创作须知](https://www.yuque.com/docs/share/ac165a31-927e-4c9a-8044-5a8e0de372e7)。
 
 ## 内容
-[最惨官微](https://weibo.com/hellogithub) | [贡献者列表](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md) | [官网](https://hellogithub.com) 
-
-每月 28 号发布[最新一期](/content/last.md)，欢迎[推荐和自荐项目](https://github.com/521xueweihan/HelloGitHub/issues/new)
+每月 28 号发布[最新一期](/content/last.md) | [推荐或自荐项目](https://github.com/521xueweihan/HelloGitHub/issues/new) |[最惨官微](https://weibo.com/hellogithub) | [贡献者列表](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md) | [官网](https://hellogithub.com) 
 
 | :squirrel: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
 | ------- | ----- | ------------ | ------ | --------- |
@@ -91,7 +89,7 @@
       </th>
       <th align="center" style="width: 80px;">
         <a href="https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md">
-          <img src="https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/logo/benevocats.png?s=50&v=4" style="width: 50px;"><br>
+          <img src="https://avatars3.githubusercontent.com/u/10628772?s=50&v=4" style="width: 50px;"><br>
           <sub>更多贡献者</sub>
         </a><br>
       </th>
