@@ -34,7 +34,7 @@
 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/logo/weixin.png" style="max-width:30%;"></img><br>
+  <img src="/521xueweihan/img/raw/master/hellogithub/logo/weixin.png" style="max-width:30%;"></img><br>
 欢迎关注 HelloGitHub 公众号，获取更多开源项目的资料和内容。
 </p>
 
