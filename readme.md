@@ -83,7 +83,7 @@
   <thead>
       <th align="center" style="width: 80px;">
         <a href="https://www.nowcoder.com?from=hellogithub">
-          <img src="https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/logo/nowcoder.jpg" width="50px"><br>
+          <img src="/521xueweihan/img/master/hellogithub/logo/nowcoder.jpg" width="50px"><br>
           <sub>牛客网</sub><br>
           <sub>IT 面试/笔试题库</sub>
         </a><br>
