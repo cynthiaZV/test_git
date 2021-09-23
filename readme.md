@@ -60,7 +60,7 @@ HelloGitHub 分享 GitHub 上有趣、入门级的开源项目。**每月 28 号
         <a href="https://doc.rentsoft.cn/">
           <img src="https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/openim.png" width="50px"><br>
           <sub>OpenIM</sub><br>
-          <sub>争做开源 IM 第一</sub>
+          <sub>争做开源IM第一</sub>
         </a>
       </th>
     </tr>
