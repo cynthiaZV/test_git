@@ -22,15 +22,7 @@ HelloGitHub 分享 GitHub 上有趣、入门级的开源项目。**每月 28 号
 | ------- | ----- | ------------ | ------ | --------- |
 | [第 65 期](/content/65/HelloGitHub65.md) | [第 64 期](/content/64/HelloGitHub64.md) | [第 63 期](/content/63/HelloGitHub63.md) | [第 62 期](/content/62/HelloGitHub62.md) | [第 61 期](/content/61/HelloGitHub61.md) |
 | [第 60 期](/content/60/HelloGitHub60.md) | [第 59 期](/content/59/HelloGitHub59.md) | [第 58 期](/content/58/HelloGitHub58.md) | [第 57 期](/content/57/HelloGitHub57.md) | [第 56 期](/content/56/HelloGitHub56.md) |
-| [第 55 期](/content/55/HelloGitHub55.md) | [第 54 期](/content/54/HelloGitHub54.md) | [第 53 期](/content/53/HelloGitHub53.md) | [第 52 期](/content/52/HelloGitHub52.md) | [第 51 期](/content/51/HelloGitHub51.md) |
-| [第 50 期](/content/50/HelloGitHub50.md) | [第 49 期](/content/49/HelloGitHub49.md) | [第 48 期](/content/48/HelloGitHub48.md) | [第 47 期](/content/47/HelloGitHub47.md) | [第 46 期](/content/46/HelloGitHub46.md) |
-| [第 45 期](/content/45/HelloGitHub45.md) | [第 44 期](/content/44/HelloGitHub44.md) | [第 43 期](/content/43/HelloGitHub43.md) | [第 42 期](/content/42/HelloGitHub42.md) | [第 41 期](/content/41/HelloGitHub41.md) |
-| [第 40 期](/content/40/HelloGitHub40.md) | [第 39 期](/content/39/HelloGitHub39.md) | [第 38 期](/content/38/HelloGitHub38.md) | [第 37 期](/content/37/HelloGitHub37.md) | [第 36 期](/content/36/HelloGitHub36.md) |
-| [第 35 期](/content/35/HelloGitHub35.md) | [第 34 期](/content/34/HelloGitHub34.md) | [第 33 期](/content/33/HelloGitHub33.md) | [第 32 期](/content/32/HelloGitHub32.md) | [第 31 期](/content/31/HelloGitHub31.md) |
-| [第 30 期](/content/30/HelloGitHub30.md) | [第 29 期](/content/29/HelloGitHub29.md) | [第 28 期](/content/28/HelloGitHub28.md) | [第 27 期](/content/27/HelloGitHub27.md) | [第 26 期](/content/26/HelloGitHub26.md) |
-| [第 25 期](/content/25/HelloGitHub25.md) | [第 24 期](/content/24/HelloGitHub24.md) | [第 23 期](/content/23/HelloGitHub23.md) | [第 22 期](/content/22/HelloGitHub22.md) | [第 21 期](/content/21/HelloGitHub21.md) |
-| [第 20 期](/content/20/HelloGitHub20.md) | [第 19 期](/content/19/HelloGitHub19.md) | [第 18 期](/content/18/HelloGitHub18.md) | [第 17 期](/content/17/HelloGitHub17.md) | [第 16 期](/content/16/HelloGitHub16.md) |
-| [第 15 期](/content/15/HelloGitHub15.md) | [第 14 期](/content/14/HelloGitHub14.md) | [第 13 期](/content/13/HelloGitHub13.md) | [第 12 期](/content/12/HelloGitHub12.md) | [第 11 期](/content/11/HelloGitHub11.md) |
+| ...略... |找开源项目上| [HelloGitHub 小程序](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/mini.png) | 支持项目搜索 | ...略... |
 | [第 10 期](/content/10/HelloGitHub10.md) | [第 09 期](/content/09/HelloGitHub09.md) | [第 08 期](/content/08/HelloGitHub08.md) | [第 07 期](/content/07/HelloGitHub07.md) | [第 06 期](/content/06/HelloGitHub06.md) |
 | [第 05 期](/content/05/HelloGitHub05.md) | [第 04 期](/content/04/HelloGitHub04.md) | [第 03 期](/content/03/HelloGitHub03.md) | [第 02 期](/content/02/HelloGitHub02.md) | [第 01 期](/content/01/HelloGitHub01.md) |
 
