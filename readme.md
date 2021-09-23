@@ -44,23 +44,23 @@ HelloGitHub 分享 GitHub 上有趣、入门级的开源项目。**每月 28 号
     <tr>
       <th align="center" style="width: 80px;">
         <a href="https://www.ucloud.cn/site/active/kuaijie.html?invitation_code=C1xF2ECA89A2592">
-          <img src="https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/ucloud.png" width="50px"><br>
+          <img src="https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/ucloud.png" width="60px"><br>
           <sub>云主机</sub><br>
           <sub>仅 4 元/月</sub>
         </a>
       </th>
       <th align="center" style="width: 80px;">
         <a href="https://www.upyun.com/">
-          <img src="https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/upyun.png" width="50px"><br>
+          <img src="https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/upyun.png" width="60px"><br>
           <sub>CDN</sub><br>
           <sub>开启全网加速</sub>
         </a>
       </th>
       <th align="center" style="width: 80px;">
         <a href="https://doc.rentsoft.cn/">
-          <img src="https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/openim.png" width="50px"><br>
+          <img src="https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/openim.png" width="60px"><br>
           <sub>OpenIM</sub><br>
-          <sub>争做开源IM第一</sub>
+          <sub>开源IM力争No.1</sub>
         </a>
       </th>
     </tr>
