@@ -35,7 +35,7 @@ HelloGitHub 分享 GitHub 上有趣、入门级的开源项目。**每月 28 号
 
 ## 赞助
 
-<table>
+<table style="text-decoration:none;">
   <thead>
     <tr>
       <th align="center" style="width: 80px;">
@@ -67,7 +67,7 @@ HelloGitHub 分享 GitHub 上有趣、入门级的开源项目。**每月 28 号
         </a>
       </th>
       <th align="center" style="width: 80px;">
-        <a style="text-decoration:none;" href="https://apifox.cn/a103hello">
+        <a href="https://apifox.cn/a103hello">
           <img src="https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/apifox.png" width="60px"><br>
           <sub>Apifox</sub><br>
           <sub>All-in-One for APIs</sub>
