@@ -66,7 +66,7 @@ HelloGitHub 分享 GitHub 上有趣、入门级的开源项目。**每月 28 号
           <sub>低时延交互编程框架</sub>
         </a>
       </th>
-      <th align="center" style="width: 80px;">
+      <th align="center" style="width: 80px; text-decoration:none">
         <a href="https://apifox.cn/a103hello">
           <img src="https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/apifox.png" width="60px"><br>
           <sub>Apifox</sub><br>
