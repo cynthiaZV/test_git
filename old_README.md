@@ -7,11 +7,11 @@
 
 ## 目录
 
-点击右上角「目录」图标，即可打开本期的目录。
+点击右上角**「目录」**图标即可打开目录，获得更好的阅读体验。
 
 ![](https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/catalog.png)
 
-**Tips**：如果这里图刷不出来、看着不舒服，可以来 [这里](https://hellogithub.com/periodical/volume/56) 获取更好的阅读体验。
+**Tips**：如果这里图刷不出来、看着不舒服，可以来 [这里](https://hellogithub.com/periodical/volume/56)。
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/weixin.png" style="max-width:30%;"></img><br>
