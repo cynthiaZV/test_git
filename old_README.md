@@ -7,7 +7,7 @@
 
 ## 目录
 
-点击右上角**「目录」**图标即可打开目录，获得更好的阅读体验。
+点击右上角的 **「目录」** 图标打开目录，获得更好的阅读体验。
 
 ![](https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/catalog.png)
 
@@ -357,9 +357,9 @@ result = reader.readtext('chinese.jpg')
 
 ---
 <p align="center">
-    👉 <a href='https://hellogithub.com/periodical'>自荐/推荐开源项目</a> 👈<br>
+    👉 <a href='https://hellogithub.com/periodical'>来！推荐开源项目</a> 👈<br>
     微信中搜：<strong>HelloGitHub</strong> 关注公众号<br>
-    不仅能第一时间收到推送，还有各种回馈粉丝活动<br>
+    不仅能第一时间收到推送，还有回馈粉丝的活动<br>
     如果文中的图刷不出来，可以点击 <a href='https://hellogithub.com/periodical/volume/56'>这里</a>。
 </p>
 
