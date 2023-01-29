@@ -7,7 +7,7 @@
 
 ## 目录
 
-点击右上角**「目录」**图标即可打开目录，获得更好的阅读体验。
+点击右上角 **「目录」** 图标即可打开目录，获得更好的阅读体验。
 
 ![](https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/catalog.png)
 
