@@ -8,15 +8,15 @@
 
 **Tips**：如果文中的图刷不出来，可以点击 [这里](https://hellogithub.com/periodical/volume/16) 获取更好的阅读体验。
 
-- [C 项目](#c-项目)
-- [C# 项目](#c-项目-1)
-- [C++ 项目](#c-项目-2)
-- [Go 项目](#go-项目)
-- [Java 项目](#java-项目)
-- [JavaScript 项目](#javascript-项目)
-- [Python 项目](#python-项目)
-- [其它](#其它)
-- [机器学习](#机器学习)
+- [C 项目](#c-%E9%A1%B9%E7%9B%AE)
+- [C# 项目](#c-%E9%A1%B9%E7%9B%AE-1)
+- [C++ 项目](#c-%E9%A1%B9%E7%9B%AE-2)
+- [Go 项目](#go-%E9%A1%B9%E7%9B%AE)
+- [Java 项目](#java-%E9%A1%B9%E7%9B%AE)
+- [JavaScript 项目](#javascript-%E9%A1%B9%E7%9B%AE)
+- [Python 项目](#python-%E9%A1%B9%E7%9B%AE)
+- [其它](#%E5%85%B6%E5%AE%83)
+- [机器学习](#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0)
 
 
 - [返回首页](https://github.com/521xueweihan/HelloGitHub#%E5%86%85%E5%AE%B9)
