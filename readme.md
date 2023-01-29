@@ -1,94 +1,316 @@
+# 《HelloGitHub》第 18 期
+> 兴趣是最好的老师，**HelloGitHub** 让你对编程感兴趣！
 <p align="center">
-  <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/readme.gif"/>
-  <br>中文 | <a href="README_en.md">English</a>
-  <br>分享 GitHub 上有趣、入门级的开源项目。<br>兴趣是最好的老师，这里能够帮你找到编程的兴趣！
+    <img src='https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/cover.jpg' style="max-width:100%;"></img>
 </p>
 
+## 目录
+
+**Tips**：如果文中的图刷不出来，可以点击 [这里](https://hellogithub.com/periodical/volume/18/) 获取更好的阅读体验。
+
+- [C 项目](#c-项目)
+- [CSS 项目](#css-项目)
+- [Go 项目](#go-项目)
+- [Java 项目](#java-项目)
+- [JavaScript 项目](#javascript-项目)
+- [PHP 项目](#php-项目)
+- [Python 项目](#python-项目)
+- [其它](#其它)
+- [机器学习](#机器学习)
+
+
+- [返回首页](https://github.com/521xueweihan/HelloGitHub#%E5%86%85%E5%AE%B9)
+
 <p align="center">
-  <a href="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/weixin.png"><img src="https://img.shields.io/badge/Talk-%E5%BE%AE%E4%BF%A1%E7%BE%A4-brightgreen.svg?style=popout-square" alt="WeiXin"></a>
-  <a href="https://github.com/521xueweihan/HelloGitHub/stargazers"><img src="https://img.shields.io/github/stars/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub stars"></a>
-  <a href="https://github.com/521xueweihan/HelloGitHub/issues"><img src="https://img.shields.io/github/issues/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub issues"></a>
-    <a href="https://weibo.com/hellogithub"><img src="https://img.shields.io/badge/%E6%96%B0%E6%B5%AA-Weibo-red.svg?style=popout-square" alt="Sina Weibo"></a>
+  <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/weixin.png" style="max-width:30%;"></img><br>
+关注「HelloGitHub」公众号，第一时间收到推送
 </p>
-
-
-## 简介
-
-HelloGitHub 分享 GitHub 上有趣、入门级的开源项目。**每月 28 号**以月刊的形式[更新发布](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA5MzYyNzQ0MQ==&action=getalbum&album_id=1331197538447310849#wechat_redirect)，内容包括：**有趣、入门级的开源项目**、**开源书籍**、**实战项目**、**企业级项目**等，让你用很短时间感受到开源的魅力，爱上开源！
 
 ## 内容
-获得更好的阅读体验 [官网](https://hellogithub.com) 或 [HelloGitHub 公众号](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png)
+> **以下为本期内容**｜每个月 **28** 号更新
 
-| :card_index: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
-| ------- | ----- | ------------ | ------ | --------- |
-| [第 80 期](/content/HelloGitHub80.md) | [第 79 期](/content/HelloGitHub79.md) | [第 78 期](/content/HelloGitHub78.md) | [第 77 期](/content/HelloGitHub77.md) | [第 76 期](/content/HelloGitHub76.md) |
-| [第 75 期](/content/HelloGitHub75.md) | [第 74 期](/content/HelloGitHub74.md) | [第 73 期](/content/HelloGitHub73.md) | [第 72 期](/content/HelloGitHub72.md) | [第 71 期](/content/HelloGitHub71.md) |
-| [第 70 期](/content/HelloGitHub70.md) | [第 69 期](/content/HelloGitHub69.md) | [第 68 期](/content/HelloGitHub68.md) | [第 67 期](/content/HelloGitHub67.md) | [第 66 期](/content/HelloGitHub66.md) |
-| [第 65 期](/content/HelloGitHub65.md) | [第 64 期](/content/HelloGitHub64.md) | [第 63 期](/content/HelloGitHub63.md) | [第 62 期](/content/HelloGitHub62.md) | [第 61 期](/content/HelloGitHub61.md) |
-| [第 60 期](/content/HelloGitHub60.md) | [第 59 期](/content/HelloGitHub59.md) | [第 58 期](/content/HelloGitHub58.md) | [第 57 期](/content/HelloGitHub57.md) | [第 56 期](/content/HelloGitHub56.md) |
-| [第 55 期](/content/HelloGitHub55.md) | [第 54 期](/content/HelloGitHub54.md) | [第 53 期](/content/HelloGitHub53.md) | [第 52 期](/content/HelloGitHub52.md) | [第 51 期](/content/HelloGitHub51.md) |
-| [第 50 期](/content/HelloGitHub50.md) | [第 49 期](/content/HelloGitHub49.md) | [第 48 期](/content/HelloGitHub48.md) | [第 47 期](/content/HelloGitHub47.md) | [第 46 期](/content/HelloGitHub46.md) |
-| [第 45 期](/content/HelloGitHub45.md) | [第 44 期](/content/HelloGitHub44.md) | [第 43 期](/content/HelloGitHub43.md) | [第 42 期](/content/HelloGitHub42.md) | [第 41 期](/content/HelloGitHub41.md) |
-| [第 40 期](/content/HelloGitHub40.md) | [第 39 期](/content/HelloGitHub39.md) | [第 38 期](/content/HelloGitHub38.md) | [第 37 期](/content/HelloGitHub37.md) | [第 36 期](/content/HelloGitHub36.md) |
-| [第 05 期](/content/HelloGitHub05.md) | [第 04 期](/content/HelloGitHub04.md) | [第 03 期](/content/HelloGitHub03.md) | [第 02 期](/content/HelloGitHub02.md) | [第 01 期](/content/HelloGitHub01.md) |
+### C 项目
+1、[db_tutorial](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/cstack/db_tutorial)：用 C 从零创建一个简单的数据库
 
-欢迎[推荐或自荐](https://github.com/521xueweihan/HelloGitHub/issues/new)项目成为 **HelloGitHub** 的[贡献者](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md)
 
-![](https://local.api.hellogithub.com/v1/widgets/featured.svg?rid=58de9a4331684190a1d23703b8471749)
+<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
 
-## 赞助
+### CSS 项目
+2、[materialize](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/Dogfalo/materialize)：基于 Material Design 的现代响应式前端框架，简化了前端的开发，文档丰富。[官网](http://materializecss.com/)
 
-<table>
-  <thead>
-    <tr>
-      <th align="center" style="width: 80px;">
-        <a href="https://www.ucloud.cn/site/active/kuaijie.html?invitation_code=C1xF2ECA89A2592">
-          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/ucloud.png" width="60px"><br>
-          <sub>云主机</sub><br>
-          <sub>仅 4 元/月</sub>
-        </a>
-      </th>
-      <th align="center" style="width: 80px;">
-        <a href="https://www.upyun.com/">
-          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/upyun.png" width="60px"><br>
-          <sub>CDN</sub><br>
-          <sub>开启全网加速</sub>
-        </a>
-      </th>
-      <th align="center" style="width: 80px;">
-        <a href="https://doc.rentsoft.cn/">
-          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/im.png" width="60px"><br>
-          <sub>OpenIM</sub><br>
-          <sub>开源IM力争No.1</sub>
-        </a>
-      </th>
-      <th align="center" style="width: 80px;">
-        <a href="https://github.com/yomorun/yomo">
-          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/yomo.jpeg" width="60px"><br>
-          <sub>YoMo</sub><br>
-          <sub>低时延交互编程框架</sub>
-        </a>
-      </th>
-      <th align="center" style="width: 80px;">
-        <a href="https://apifox.cn/a103hello">
-          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/apifox.png" width="60px"><br>
-          <sub>Apifox</sub><br>
-          <sub>比 Postman 更强大</sub>
-        </a>
-      </th>
-      <th align="center" style="width: 80px;">
-        <a href="https://he3.app?utm_source=hellogithub&utm_medium=github&utm_campaign=hellogithub">
-          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/he3.png" width="60px"><br>
-          <sub>He3</sub><br>
-          <sub>开发者必备工具箱</sub>
-        </a>
-      </th>
-    </tr>
-  </thead>
-</table>
+
+<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
+
+### Go 项目
+3、[echo](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/labstack/echo)：Go 语言最受欢迎的 Web 框架之一，具有：高性能、便于扩展、轻量的特点，示例代码：
+```go
+package main
+
+import "github.com/labstack/echo"
+
+func main() {
+	e := echo.New()
+	e.GET("/", callback)
+	e.Logger.Fatal(e.Start(":3000"))
+}
+
+func callback(ctx echo.Context) error {
+	return ctx.HTML(200, "<h1>你好 echo</h1>")
+}
+```
+
+
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/18/31504491.png' style="max-width:80%; max-height=80%;"></img></p>
+
+4、[tidb](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/pingcap/tidb)：开源分布式 NewSQL 数据库，能优雅的替换传统的数据库中间件、数据库分库分表等 Sharding 方案。具备如下核心特性：
+- SQL支持 （TiDB 是 MySQL 兼容的）
+- 水平线性弹性扩展
+- 分布式事务
+- 跨数据中心数据强一致性保证
+- 故障自恢复的高可用
+
+
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/18/41986369.png' style="max-width:80%; max-height=80%;"></img></p>
+
+<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
+
+### Java 项目
+5、[AndroidTVLauncher](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/JackyAndroid/AndroidTVLauncher)：一个 TV Leanback 风格桌面，基于 Leanback 库开发，符合 Android TV 官方交互规范
+
+
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/18/54820465.png' style="max-width:80%; max-height=80%;"></img></p>
+
+6、[spring-data-jpa-datatables](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/darrachequesne/spring-data-jpa-datatables)：spring-data-jpa 和 jQuery [datatables](https://www.datatables.net/) 集成工具。极大简化基于 datatables 数据表格的开发，示例代码：
+```
+// 前端代码
+$(document).ready(function() {
+	var table = $('table#sample').DataTable({
+		'ajax': {
+			'contentType': 'application/json',
+			'url': '/data/users',
+			'type': 'POST',
+			'data': function(d) {
+				return JSON.stringify(d);
+			}
+		},
+
+// java 代码 server-side becomes
+@JsonView(DataTablesOutput.View.class)
+@RequestMapping(value = "/data/users", method = RequestMethod.POST)
+public DataTablesOutput<User> getUsers(@Valid @RequestBody DataTablesInput input) {
+	return userRepository.findAll(input);
+}
+```
+
+
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/18/40502132.png' style="max-width:80%; max-height=80%;"></img></p>
+
+7、[xxl-job](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/xuxueli/xxl-job)：轻量级分布式任务调度框架，其核心设计目标是：开发迅速、学习简单、轻量级、易扩展，文档齐全。[官网](http://www.xuxueli.com/xxl-job/)
+
+
+<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
+
+### JavaScript 项目
+8、[flatpickr](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/flatpickr/flatpickr)：扁平化的日期选择组件，项目源码使用 TypeScript 编写，可以学习使用 Typescript 编写 JS 插件，Typescript 语言的好处是：可以在多人协作中避免一些变量类型错误的问题，从而提高效率。使用示例代码：
+```javascript
+// ConnonJS 方式引入
+const flatpickr = require("flatpickr");
+flatpickr("#myID", {});
+flatpickr(".myClass", {}); 
+
+// jQuery 方式引入
+$(".selector").flatpickr(optional_config);
+```
+
+
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/18/40511756.png' style="max-width:80%; max-height=80%;"></img></p>
+
+9、[puppeteer](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/puppeteer/puppeteer)：Google Chrome 团队开源的面向 Node.js 的，基于 DevTools 协议的远程 Headless Chrome 控制库，它可以生成网页截图、PDF、抓取单页应用与网页内容、进行自动化表单提交、界面测试与模拟键盘输入等功能。示例代码如下：
+```javascript
+// 访问 https://example.com 并将截图保存为 example.png
+const puppeteer = require('puppeteer');
+
+(async () => {
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+  await page.goto('https://example.com');
+  await page.screenshot({path: 'example.png'});
+
+  await browser.close();
+})();
+```
+
+
+10、[SelectPage](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/TerryZ/SelectPage)：简洁优雅而功能强大的选择器，使用简单，适应各种UI环境，功能强大，丰富的参数和回调函数
+。它包含了 autocomplete、ajax 数据源、多选择 Tag、i18n 国际化，结果列表分页展示，键盘快捷操作等
+```javascript
+//defined a array, the data returned at the server side is also used that format：
+//Array[{Object},{...}]
+var data = [
+    {id:1 ,name:'Chicago Bulls',desc:'芝加哥公牛'},
+    {id:2 ,name:'Cleveland Cavaliers',desc:'克里夫兰骑士'},
+    {id:3 ,name:'Detroit Pistons',desc:'底特律活塞'},
+    {id:4 ,name:'Indiana Pacers',desc:'印第安纳步行者'}
+];
+//init SelectPage
+$('#selectpage').selectPage({
+    showField : 'desc',
+    keyField : 'id',
+    data : data
+});
+```
+
+
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/18/92522639.png' style="max-width:80%; max-height=80%;"></img></p>
+
+11、[vue-3d-model](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/hujiulong/vue-3d-model)：展示三维模型的 Vue 组件，支持模型操作和模型点击事件，能自动缩放模型到合适大小并校正偏移，目前支持 obj、stl、dae 和 json 格式的模型，示例代码：
+```vue
+<template>
+    <model-obj src="example/models/obj/LeePerrySmith.obj"></model-obj>
+</template>
+<script>
+    import { ModelObj } from 'vue-3d-model'
+
+    export default {
+        components: { ModelObj }
+    }
+</script>
+```
+
+
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/18/89053626.gif' style="max-width:80%; max-height=80%;"></img></p>
+
+12、[weweChat](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/trazyn/weweChat)：微信的第三方客户端。在完整实现 Web 微信功能的基础上，新增并优化部分功能，重设计整体 UI，提供更好的体验。Mac 安装命令：`brew cask install wewechat`
+
+
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/18/96892030.png' style="max-width:80%; max-height=80%;"></img></p>
+
+<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
+
+### PHP 项目
+13、[wooyun_public](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/hanc00l/wooyun_public)：乌云公开漏洞、知识库爬虫和搜索
+
+
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/18/42825774.png' style="max-width:80%; max-height=80%;"></img></p>
+
+<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
+
+### Python 项目
+14、[faker](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/joke2k/faker)：用于生成假数据的库，支持多种语言，你值得拥有。示例代码：
+```python
+fake.address()
+# '辽宁省雪市静安廉街b座 998259'
+
+fake.street_address()
+# '巢湖街U座'
+
+fake.building_number()
+# 'x座'
+
+fake.city_suffix()
+# '市'
+
+fake.latitude()
+# Decimal('-0.295126')
+
+fake.province()
+# '湖北省'
+```
+
+
+15、[newspaper](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/codelucas/newspaper)：强大的提取 Web 的内容、文章的库，支持多种语言，安装命令 `pip3 install newspaper3k`。示例代码：
+```python
+>>> from newspaper import Article
+
+>>> url = 'http://fox13now.com/2013/12/30/new-year-new-laws-obamacare-pot-guns-and-drones/'
+>>> article = Article(url)
+
+>>> article.download()
+
+>>> article.html
+'<!DOCTYPE HTML><html itemscope itemtype="http://...'
+
+>>> article.parse()
+
+>>> article.authors
+['Leigh Ann Caldwell', 'John Honway']
+
+>>> article.publish_date
+datetime.datetime(2013, 12, 30, 0, 0)
+
+>>> article.text
+'Washington (CNN) -- Not everyone subscribes to a New Year's resolution...'
+
+>>> article.top_image
+'http://someCDN.com/blah/blah/blah/file.png'
+
+>>> article.movies
+['http://youtube.com/path/to/link.com', ...]
+
+>>> from newspaper import Article
+>>> url = 'http://www.bbc.co.uk/zhongwen/simp/chinese_news/2012/12/121210_hongkong_politics.shtml'
+
+>>> a = Article(url, language='zh') # Chinese
+
+>>> a.download()
+>>> a.parse()
+
+>>> print(a.text[:150])
+香港行政长官梁振英在各方压力下就其大宅的违章建
+筑（僭建）问题到立法会接受质询，并向香港民众道歉。
+梁振英在星期二（12月10日）的答问大会开始之际
+在其演说中道歉，但强调他在违章建筑问题上没有隐瞒的
+意图和动机。 一些亲北京阵营议员欢迎梁振英道歉，
+且认为应能获得香港民众接受，但这些议员也质问梁振英有
+
+>>> print(a.title)
+港特首梁振英就住宅违建事件道歉
+```
+
+
+16、[pygorithm](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/OmkarPathak/pygorithm)：一个帮助学习主要算法的库，可以通过理解这些算法的实现，提高自己的算法水平。冒泡排序示例：
+```python
+>>> from pygorithm.sorting import bubble_sort
+>>> my_list = [12, 4, 3, 5, 13, 1, 17, 19, 15]
+>>> sorted_list = bubble_sort.sort(my_list)
+>>> print(sorted_list)
+>>> [1, 3, 4, 5, 12, 13, 15, 17, 19]
+```
+
+
+<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
+
+### 其它
+17、[china_area_mysql](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/kakuilan/china_area_mysql)：中国 5 级行政区域 MySQL 库
+
+
+18、[ctf-wiki](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/ctf-wiki/ctf-wiki)：一个自由的站点，主要包含了 CTF 的基础知识 、常见题型、解题思路以及常用工具等，希望可以帮助你更快地了解 CTF 竞赛以及网络安全相关知识
+
+
+19、[open_source_team](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/niezhiyang/open_source_team)：国内顶尖团队的开源地址
+
+
+<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
+
+### 机器学习
+20、[deeplearningbook-chinese](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/exacity/deeplearningbook-chinese)：Deep Learning 中文版
+
+
+<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
+
+
+
+<p align="center">
+    <a href="https://github.com/521xueweihan/HelloGitHub/blob/master/content/HelloGitHub17.md">『上一期』</a> | <a href='https://github.com/521xueweihan/HelloGitHub/issues/899'>反馈和建议</a> | <a href="https://github.com/521xueweihan/HelloGitHub/blob/master/content/HelloGitHub19.md">『下一期』</a>
+</p>
+
+---
+<p align="center">
+    👉 <a href='https://hellogithub.com/periodical'>推荐项目</a> 👈<br>
+    微信中搜：<strong>HelloGitHub</strong> 关注公众号<br>
+    不仅能第一时间收到推送，还有各种回馈粉丝活动<br>
+    如果文中的图刷不出来，可以点击 <a href='https://hellogithub.com/periodical/volume/18/'>这里</a> 获取更好的阅读体验。
+</p>
 
 ## 声明
-
-
-
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>本作品采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">署名-非商业性使用-禁止演绎 4.0 国际</a> 进行许可。<a href="mailto:595666367@qq.com">联系我</a>
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>本作品采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">署名-非商业性使用-禁止演绎 4.0 国际</a> 进行许可。
