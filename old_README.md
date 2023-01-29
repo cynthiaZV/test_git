@@ -1,28 +1,17 @@
-# 《HelloGitHub》第 20 期
+# 《HelloGitHub》第 56 期
 > 兴趣是最好的老师，**HelloGitHub** 让你对编程感兴趣！
 <p align="center">
     <img src='https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/cover.jpg' style="max-width:100%;"></img>
 </p>
 
+
 ## 目录
 
-**Tips**：如果文中的图刷不出来，可以点击 [这里](https://hellogithub.com/periodical/volume/20) 获取更好的阅读体验。
+点击右上角「目录」图标，即可打开本期的目录。
 
-<svg role="img" class="octicon octicon-list-unordered" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display: inline-block; user-select: none; vertical-align: text-bottom; overflow: visible;"><path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+![](https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/catalog.png)
 
-<a id="user-content-c-项目" class="anchor" aria-hidden="true" href="#c-项目">C# 项目</a>
-- [c](#c)
-- [CSS 项目](#user-content-css-项目)
-- [Go 项目](#go-项目)
-- [Java 项目](#java-项目)
-- [JavaScript 项目](#javascript-项目)
-- [Kotlin 项目](#kotlin-项目)
-- [Python 项目](#python-项目)
-- [其它](#其它)
-- [机器学习](#机器学习)
-
-
-- [返回首页](https://github.com/521xueweihan/HelloGitHub#%E5%86%85%E5%AE%B9)
+**Tips**：如果这里图刷不出来、看着不舒服，可以来 [这里](https://hellogithub.com/periodical/volume/56) 获取更好的阅读体验。
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/weixin.png" style="max-width:30%;"></img><br>
@@ -32,197 +21,338 @@
 ## 内容
 > **以下为本期内容**｜每个月 **28** 号更新
 
+### C 项目
+1、[ucore](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/kiukotsu/ucore)：清华大学操作系统课程，配套实验项目。推荐给有计算机结构原理、C 和汇编、数据结构基础并对操作系统感兴趣的同学，项目中包含教学视频、练习题、实验指导书等
+
+
 ### C# 项目
-1、[csharplang](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/dotnet/csharplang)：C# 语言设计官方项目，在这里你可以直接参与讨论。同时还有：
-- 语言特色提议
-- C# 语言设计会议记要
-- 完整的 C# 6 语言规范（草案）
-- 语言版本历史摘要
+2、[ContextMenuManager](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/BluePointLilac/ContextMenuManager)：一个纯粹的 Windows 右键菜单管理程序。功能：
+- 启用或禁用文件、文件夹、新建、发送到、打开方式等右键菜单项目
+- 右键菜单项目进行修改名称、修改图标、导航注册表位置、永久删除等操作
+- 右键菜单自定义添加项目，自定义菜单命令
 
 
-<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img2/master/hellogithub/56/304230333.png' style="max-width:80%; max-height=80%;"></img></p>
 
-### C
-2、[robomongo](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/Studio3T/robomongo)：免费、开源的 MongoDB 跨平台桌面管理工具，支持 Windows、Linux、Mac
+3、[RevokeMsgPatcher](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/huiyadanli/RevokeMsgPatcher)：适用于 Windows 系统下电脑版微信、QQ 的防撤回工具
 
 
-<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/20/6580000.png' style="max-width:80%; max-height=80%;"></img></p>
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img2/master/hellogithub/56/198071756.png' style="max-width:80%; max-height=80%;"></img></p>
 
-<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
+### C++ 项目
+4、[spdlog](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/gabime/spdlog)：快速、上手简单的 C++ 日志库。示例代码：
+```C++
+#include "spdlog/spdlog.h"
+
+int main() 
+{
+    spdlog::info("Welcome to spdlog!");
+    spdlog::error("Some error message with arg: {}", 1);
+    
+    spdlog::warn("Easy padding in numbers like {:08d}", 12);
+    spdlog::critical("Support for int: {0:d};  hex: {0:x};  oct: {0:o}; bin: {0:b}", 42);
+    spdlog::info("Support for floats {:03.2f}", 1.23456);
+    spdlog::info("Positional args are {1} {0}..", "too", "supported");
+    spdlog::info("{:<30}", "left aligned");
+    
+    spdlog::set_level(spdlog::level::debug); // Set global log level to debug
+    spdlog::debug("This message should be displayed..");    
+    
+    // change log pattern
+    spdlog::set_pattern("[%H:%M:%S %z] [%n] [%^---%L---%$] [thread %t] %v");
+    
+    // Compile time log levels
+    // define SPDLOG_ACTIVE_LEVEL to desired level
+    SPDLOG_TRACE("Some trace message with param {}", 42);
+    SPDLOG_DEBUG("Some debug message");
+}
+```
+
+
+5、[srpc](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/sogou/srpc)：搜狗基于 C++ Workflow 的高性能 RPC 框架。与 thrift/brpc 协议兼容，支持 protobuf/thrift IDL一键迁移，核心代码量仅 1w 行。示例代码：
+```c++
+class ExampleServiceImpl : public Example::Service
+{
+public:
+    void Echo(EchoRequest *request, EchoResponse *response, RPCContext *ctx) override
+    {
+        response->set_message("Hi, " + request->name());
+    }
+};
+
+int main()
+{
+    SRPCHttpServer server;
+    ExampleServiceImpl impl;
+    server.add_service(&impl);
+    server.start(1412);
+    pause();
+    server.stop();
+    return 0;
+}
+访问：
+curl 127.0.0.1:1412/Example/Echo -H 'Content-Type: application/json' -d '{message:"from curl",name:"CURL"}'
+```
+
+
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img2/master/hellogithub/56/295369297.png' style="max-width:80%; max-height=80%;"></img></p>
 
 ### CSS 项目
-3、[magic-of-css](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/adamschwartz/magic-of-css)：一套可以让你成为“魔术师”的 CSS 教程（英文）
+6、[tailwindcss](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/tailwindlabs/tailwindcss)：基于比组件更小、更灵活的工具类（utility-first）思想的 CSS 框架。这个思想简单来说就是用 class 保证灵活、便于自定义组件，而不是在组件基础上实现个性化。网上对这个框架褒贬不一，但我觉得挺好想学一下
 
 
-4、[milligram](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/milligram/milligram)：极简风格的 CSS 框架，而且文件很小
-
-
-<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/20/47775741.png' style="max-width:80%; max-height=80%;"></img></p>
-
-<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img2/master/hellogithub/56/106017343.png' style="max-width:80%; max-height=80%;"></img></p>
 
 ### Go 项目
-5、[monkey](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/haifenghuang/monkey)：用 Go 语言写的解析器，包含诸多语言特性。入门实践项目，适合新手熟悉 Go 语言和语言解析器入门
+7、[go-zero](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/zeromicro/go-zero)：一个可靠的 Go 语言 Web 和 RPC 框架。就算是 Go 新手基于该框架，也可以快速写出高性能可扩展的微服务。示例代码：
+```go
+func main() {
+  flag.Parse()
+
+  var c config.Config
+  conf.MustLoad(*configFile, &c)
+
+  ctx := svc.NewServiceContext(c)
+  server := rest.MustNewServer(c.RestConf)
+  defer server.Stop()
+
+  handler.RegisterHandlers(server, ctx)
+
+  server.Start()
+}
+```
 
 
-<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img2/master/hellogithub/56/285864199.png' style="max-width:80%; max-height=80%;"></img></p>
+
+8、[lazykube](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/TNK-Studio/lazykube)：支持鼠标操作和管理 K8s 的命令行工具。对比 k9s 命令行工具，可以不用去记那么多快捷键，直接用鼠标操作。解决公司不使用 rancher 和 dashboard 管理 K8s，只能通过堡垒机访问的场景。使用该工具只需要终端和鼠标，当然用到搜索功能时还是需要键盘的 😂
+
+
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img2/master/hellogithub/56/310469027.gif' style="max-width:80%; max-height=80%;"></img></p>
+
+9、[syncthing](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/syncthing/syncthing)：一个采用 Go 语言编写的免费、跨平台的文件同步工具。它不需要安装，只需要下载对应系统的压缩包解压后就可以直接运行和使用。拥有命令行、Web 和桌面程序多种操作模式，同时支持内网和互联网的文件同步，可以用来搭建私有网盘。又一个代替付费网盘的选择，如果考虑到昂贵的宽费用。可以把 syncthing 做为局域网下手机、电视和电脑共享文件的开源解决方案
+
+
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img2/master/hellogithub/56/14712850.png' style="max-width:80%; max-height=80%;"></img></p>
 
 ### Java 项目
-6、[Android-Pay](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/mayubao/Android-Pay)：支持微信和支付宝两种主流支付的集成库，示例代码如下：
-```java
-//1.创建微信支付请求
-WechatPayReq wechatPayReq = new WechatPayReq.Builder()
-        .with(this) //activity实例
-        .setAppId(appid) //微信支付AppID
-        .setPartnerId(partnerid)//微信支付商户号
-        .setPrepayId(prepayid)//预支付码
-//      .setPackageValue(wechatPayReq.get)//"Sign=WXPay"
-        .setNonceStr(noncestr)
-        .setTimeStamp(timestamp)//时间戳
-        .setSign(sign)//签名
-        .create();
-//2.发送微信支付请求
-PayAPI.getInstance().sendPayRequest(wechatPayReq);
-
-//关于微信支付的回调
-//wechatPayReq.setOnWechatPayListener(new OnWechatPayListener);
-```
+10、[Mindustry](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/Anuken/Mindustry)：一款 Java 编写的免费沙盒塔防游戏。支持多平台：Windows、Linux、macOS、Android 
 
 
-7、[AndroidSwipeLayout](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/daimajia/AndroidSwipeLayout)：[代码家](https://github.com/daimajia)开源的滑动布局库，不用多说什么了。动起手来试试，然后通过阅读代码学习大神们的编程技巧，有一天你也可以做出有价值、流行的开源库
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img2/master/hellogithub/56/89822531.png' style="max-width:80%; max-height=80%;"></img></p>
+
+11、[novel](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/201206030/novel)：一个基于 SpringBoot 实现的小说和漫画在线阅读网站。网站功能齐全、资源丰富，同时支持 Web、安卓、微信小程序多平台。服务端分为网站和管理后台，采用 SpringBoot、MyBatis、MySQL、Redis 等技术实现，可当作 Java 新手实战项目学习
 
 
-<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/20/23301468.gif' style="max-width:80%; max-height=80%;"></img></p>
-
-<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img2/master/hellogithub/56/220875250.png' style="max-width:80%; max-height=80%;"></img></p>
 
 ### JavaScript 项目
-8、[flowhub](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/yyued/flowhub)：仅 6KB 通过简单的 API & 自由组合的链式写法，轻松订阅管理各类事件流。示例代码如下：
+12、[AdminLTE](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/ColorlibHQ/AdminLTE)：基于 Bootstrap 4.5 和 jQuery 的管理后台模板
+
+
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img2/master/hellogithub/56/15428480.png' style="max-width:80%; max-height=80%;"></img></p>
+
+13、[blockly](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/google/blockly)：不会编程也可以写代码，通过拖拽模块自动生成代码的 Web 编辑器。谷歌开源的一个可视化编程的前端项目，支持自动生成：Python、JavaScript、PHP 等编程语言的代码，在线尝试的地址网络不好，可以通过 `npm install blockly` 安装后使用和学习
+
+
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img2/master/hellogithub/56/13872231.png' style="max-width:80%; max-height=80%;"></img></p>
+
+14、[lucky-canvas](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/buuing/lucky-canvas)：一个基于 Vue 的大转盘/九宫格抽奖插件。[在线尝试](https://100px.net/demo/wheel/ymc.html)，特性：
+- 可自由配置奖品、中奖概率等
+- 支持同步、异步式抽奖
+- 适配移动端
+- 等等
+
+
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img2/master/hellogithub/56/191120006.png' style="max-width:80%; max-height=80%;"></img></p>
+
+15、[piano](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/Wscats/piano)：基于 Omi 和 Omi Snippets 构建的钢琴应用。你不需要懂乐理知识，仅用键盘即可弹奏简单而熟悉的音乐，也借此项目感谢音乐和编程的陪伴！也致敬各位奋斗于 996 的代码家和打工人，音乐不曾辜负任何人，正如 Leehom Wang 歌曲中唱到：如果世界太危险，只有音乐最安全，带着我进梦里面，让歌词都实现！上面这段是作者写的推荐语，我本来想从项目的角度再夸下这个项目，但我放弃了。虽然我之前推荐过的那个钢琴项目弹的比这个要好听，但我更喜欢这个项目。因为我从他的项目中感受到满满敬意和“爱”，致敬每一位奋斗的“代码家”，HG 爱你们。[在线尝试](http://wscats.gitee.io/piano/build/)，示例代码：
 ```javascript
-import $hub from 'hub-js';
-
-// 定义一个 “test” 监听器
-$hub.listen('test', ( data ) => {
-    console.log( 'test', data );
-});
-
-setInterval(( ) => {
-    // 发出 “test” 事件
-    $hub.emit('test', { code: 1 });
-}, 1000);
+playSong(song) {
+  this.setSong([...song])
+  let offset = 0
+  let time = 0
+  let playSong = async () => {
+    // 右边是从外部来中断递归
+    if (offset < song.length && this.store.data.song.length > 0) {
+      switch (typeof song[offset]) {
+        // 简谱2演奏方法 根据 ++12345--6. 简单旋律情况
+        case 'string':
+          let letters = song[offset].match(/[0-9]/g)
+          switch (letters.length) {
+            case 1:
+              time = this.handleString(song, offset)
+              break
+            default:
+              time = this.handleStrings(song, offset)
+              break
+          }
+          break
+        // 简谱1演奏方法 根据 CDEFGAB，复杂旋律情况，比如有和弦
+        case 'object':
+          console.log(song[offset]['note'])
+          time = song[offset]['time'];
+          this.playNote(song[offset]['note'])
+          break;
+        case 'number':
+          // 休止符
+          switch (song[offset]) {
+            case 0:
+              time = 1000
+              break
+          }
+          break
+      }
+      await new Promise((resolve) => {
+        let timer = setTimeout(() => {
+          clearInterval(timer)
+          resolve()
+        }, time)
+      })
+      offset++
+      // 自定义事件，跟下面底部的音符自动跳动结合
+      this.add()
+      playSong()
+    } else {
+      // 暂停播放
+      clearTimeout(this.timer)
+      this.store.data.song = []
+      this.store.data.count = 0
+      return
+    }
+  }
+  playSong()
+}
 ```
 
 
-9、[IDValidator](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/mc-zone/IDValidator)：中国大陆个人身份证号验证，支持 15、18 位身份证号，API 如下：
-- `isValid` 验证号码是否合法，合法返回 True，不合法返回 False
-- `getInfo` 号码合法时返回分析信息（地区、出生日期、性别、校验位），不合法返回 False
-- `makeID` 伪造一个符合校验的 ID
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img2/master/hellogithub/56/84766582.gif' style="max-width:80%; max-height=80%;"></img></p>
+
+16、[screenity](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/alyssaxuu/screenity)：一个强大的屏幕录制和标注的 Chrome 插件。特性：
+- 🎥  可以录制任何应用的内容，包含“色相头”
+- ✏️  在屏幕上的任何地方，添加文本和箭头等注释
+- 👀  突出你的点击操作、光标
+- 💾  支持导出为 mp4、gif 等常用格式
+- ✂️  修剪或删除录像
 
 
-10、[livepython](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/agermanidis/livepython)：可视化、实时追踪展示 Python 代码
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img2/master/hellogithub/56/309123651.gif' style="max-width:80%; max-height=80%;"></img></p>
+
+### Objective-C 项目
+17、[Sloth](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/sveinbjornt/Sloth)：一款 macOS 系统下显示进程打开的文件、socket、管道等信息的工具。就像桌面版的 lsof，快来试试吧
 
 
-<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/20/105598718.gif' style="max-width:80%; max-height=80%;"></img></p>
-
-11、[nba-go](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/homerchen19/nba-go)：可以用命令终端查看 NBA 比赛，包括比赛开始时间表、实时比分情况、文字直播（英文）等。终端看 NBA，你才是最潮的。安装命令 `npm install -g nba-go`
-
-
-<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/20/108231108.png' style="max-width:80%; max-height=80%;"></img></p>
-
-12、[React-Cnode](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/Juliiii/React-Cnode)：适合新手的 React 全家桶项目学习，同时附有作者在开发中的一些[思考](http://www.jianshu.com/p/43c604177c08)
-
-
-<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/20/101363122.gif' style="max-width:80%; max-height=80%;"></img></p>
-
-<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
-
-### Kotlin 项目
-13、[Flesh](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/Kerr1Gan/Flesh)：如果你是一位想学习一下 Kotlin 的同学，那么 Flesh 是一个适合学习、练手、入门的项目。从中可以学到 Java 与 Kotlin 间的相互调用、爬虫操作。这是个诚意（福利）满满的项目，快去下载、加入到这个项目中吧
-
-
-<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/20/102702014.gif' style="max-width:80%; max-height=80%;"></img></p>
-
-14、[kotlin-guides](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/android/kotlin-guides)：这份指南提供了在使用 Kotlin 编写 Android 程序时要遵循的一系列规则
-
-
-<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img2/master/hellogithub/56/1535038.jpg' style="max-width:80%; max-height=80%;"></img></p>
 
 ### Python 项目
-15、[joblib](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/joblib/joblib)：使用 Python 方便的进行并行计算，示例代码如下：
-```python
-from joblib import Parallel, delayed
-from math import sqrt
-Parallel(n_jobs=1)(delayed(sqrt)(i**2) for i in range(10))
+18、[flask-state](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/yoobool/flask-state)：一款轻便的机器状态监控 Flask 插件。示例代码：
+```
+flask_state.init_app(app)
+// npm
+import 'echarts';
+import 'flask-state/flask-state.min.css';
+import {init} from 'flask-state';
+// Create a DOM node with ID 'test'. After init() binds the node, click to open the listening window
+init({dom:document.getElementById('test')});
 ```
 
 
-16、[records](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/kennethreitz/records)：Kenneth Reitz 大神的`for Humans™`系列，Records 是一个支持大多数主流关系数据库的原生 SQL 查询第三方库。API 友好，使用简单、支持命令行模式、功能多样。与此同时该库只有 500 行代码，可以当作入门阅读源码的项目，同时学习大神的编程技巧与习惯，示例代码如下：
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img2/master/hellogithub/56/290091588.png' style="max-width:80%; max-height=80%;"></img></p>
+
+19、[gopup](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/justinzm/gopup)：采集各种权威公开数据的 Python 库。示例代码：
 ```python
-import records
+# 安装：pip isntall gopup 
 
-db = records.Database('postgres://...')  # 连接数据库
-rows = db.query('select * from active_users')  # 执行原生 SQL
-# 遍历结果
-for r in rows:
-    print(r.name, r.user_email)
-
-# 友好的 print 格式
-print(rows.dataset)
-# username|active|name      |user_email       |timezone
-# --------|------|----------|-----------------|--------------------------
-# model-t |True  |Henry Ford|model-t@gmail.com|2016-02-06 22:28:23.894202
-
-# 支持将结果导出成不同格式
-print(rows.export('json'))  # json
-print(rows.export('csv'))  # csv
-print(rows.export('yaml')) # yaml
-rows.export('df')  # pandas 的 df 对象
-with open('report.xls', 'wb') as f:
-    f.write(rows.export('xls'))  # xls
+import gopup as gp
+covid_baidu_df = gp.covid_baidu(indicator="热搜谣言粉碎")
+print(covid_baidu_df)
 ```
 
 
-17、[tldr-python-client](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/tldr-pages/tldr-python-client)：Linux man 解释一般都太长了，很多时候我们就想用一些比较常用的命令，但却记不起来。这个时候如果不 Google，就可以用 [tldr（简化 man 的工程）](https://github.com/tldr-pages/tldr)。该项目为 Python 客户端实现
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img2/master/hellogithub/56/248739733.png' style="max-width:80%; max-height=80%;"></img></p>
+
+20、[python-cheatsheet](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/gto76/python-cheatsheet)：全面且实用的 Python 备忘录。这个东西特别适合我这个上了年纪的人，比如：忘记怎么用 Python 写正则、要搞个进度条忘记库的名字和基本用法、用 pandas 处理数据忘记方法需要的参数等等。正当我觉得自己需要“回炉重学”的时候发现了这个项目，有了它上面的问题都可以找到拿来即用的代码片段。我又是那个快乐的 Pythoneer 了，示例代码：
+```python
+# $ pip3 install tqdm
+>>> from tqdm import tqdm
+>>> from time import sleep
+>>> for el in tqdm([1, 2, 3], desc='Processing'):
+...     sleep(1)
+Processing: 100%|████████████████████| 3/3 [00:03<00:00,  1.00s/it]
+```
 
 
-<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/20/17429141.png' style="max-width:80%; max-height=80%;"></img></p>
+21、[running_page](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/yihong0618/running_page)：一个展示个人跑步主页的 Python 项目。特性：
+- GitHub Actions 管理自动同步跑步进程及自动生成新的页面
+- Gatsby 生成的静态网页，速度快
+- Mapbox 进行地图展示
+- 支持 Nike、Runtastic、佳明、Keep 的数据
+- 自动备份 gpx 数据，方便备份及上传到其它软件
 
-18、[zdict](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/zdict/zdict)：方便的终端字典工具，支持多种字典和参数、翻译结果高亮、以及交互模式查询。安装命令 `pip install zdict` （仅支持 Python3）。查询效果如下图所示：
+
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img2/master/hellogithub/56/296233312.gif' style="max-width:80%; max-height=80%;"></img></p>
+
+### Swift 项目
+22、[eul](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/gao-sun/eul)：一款极简免费的 macOS 状态监控工具。我就在用，强烈推荐给你
 
 
-<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/20/34254274.png' style="max-width:80%; max-height=80%;"></img></p>
-
-<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img2/master/hellogithub/56/275095333.jpg' style="max-width:80%; max-height=80%;"></img></p>
 
 ### 其它
-19、[github-cheat-sheet](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/tiimgreen/github-cheat-sheet)：GitHub 和 Git 的秘籍，[中文](https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md)
+23、[CopyTranslator](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/CopyTranslator/CopyTranslator)：支持网页和 PDF 的划词翻译工具。有了它就可以解决阅读 PDF 文件时，要翻译大段内容情况下的乱码、换行、翻译不准的问题
 
 
-20、[hangzhouYunQi2017ppt](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/Alibaba-Technology/hangzhouYunQi2017ppt)：2017 杭州云栖大会精华 PPT，[移步到阿里云下载与浏览](https://yq.aliyun.com/articles/231065)
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img2/master/hellogithub/56/134030857.gif' style="max-width:80%; max-height=80%;"></img></p>
+
+24、[Front-End-Interview-Notebook](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/CavsZhouyou/Front-End-Interview-Notebook)：一份非拼凑、优秀的前端面试复习笔记。以提问方式发出问题，并给出了作者的答案，内容涵盖：HTML、CSS、JS、算法、计算机网络等方面。作者拿到了很多大厂 offer，然后把这些东西总结整理下来送给准备面试、换工作的前端小伙伴
 
 
-21、[nodebestpractices](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/goldbergyoni/nodebestpractices)：Node.js 最佳实践列表（英文）
+25、[pi-hole](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/pi-hole/pi-hole)：一个免费开源、部署简单的 DNS sinkhole 项目。没关系，我也不明白 DNS sinkhole 是个啥，就知道用它可实现路由器层屏蔽广告的功能。需要先在树莓派安装这个项目，然后配合支持自定义 DNS 的路由器，就可以实现该网络下的全设备广告自动屏蔽。[详细步骤](https://sspai.com/post/58183)
 
 
-22、[vim-game-code-break](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/johngrib/vim-game-code-break)：Vim 中的打砖块游戏
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img2/master/hellogithub/56/20619036.png' style="max-width:80%; max-height=80%;"></img></p>
+
+26、[styleguide](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/google/styleguide)：谷歌的代码风格指南。每个大型项目都有自己的代码风格，当代码的风格统一时将更容易被理解。本项目是谷歌项目的代码风格说明，包含：C++、C#、Swift、Python、Java 等语言
 
 
-<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/20/94041124.gif' style="max-width:80%; max-height=80%;"></img></p>
+27、[upptime](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/upptime/upptime)：一个免费开源的网站正常运行时间（uptime）监控服务。之所没有任何费用是因为实现方法都是完全基于 GitHub 提供的免费服务，比如：使用 GitHub 的 Action 每隔 5 分钟访问一次目标网站，获取网站最新的状态。然后通过 GitHub Issues 记录和报告异常，最后在 GitHub Pages 上可视化展示网站的运行状态。就很“绿色无公害”，我特别喜欢
 
-<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
+
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img2/master/hellogithub/56/286080143.png' style="max-width:80%; max-height=80%;"></img></p>
+
+28、[winapps](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/Fmstrat/winapps)：一个让你在 Linux (Ubuntu/Fedora) 系统里使用 Windows 办公软件的项目。支持 Microsoft Excel、Word、PowerPoint、Adobe Photoshop 等
+
+
+<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img2/master/hellogithub/56/310933773.gif' style="max-width:80%; max-height=80%;"></img></p>
 
 ### 机器学习
-23、[angel](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/Angel-ML/angel)：腾讯开源的高性能分布式机器学习平台，具有广泛的适用性和稳定性，模型维度越高。它将高维度的大模型合理切分到多个参数服务器节点，并通过高效的模型更新接口和运算函数，以及灵活的同步协议，可以实现各种高效的机器学习算法
+29、[DeepLearningProject](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/Spandan-Madan/DeepLearningProject)：哈佛大学开源的深度学习教程
 
 
-<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/20/89322848.png' style="max-width:80%; max-height=80%;"></img></p>
+30、[EasyOCR](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/JaidedAI/EasyOCR)：支持多种语言的即用型的 Python OCR 库，包括中文、日文、韩文等。示例代码：
+```python
+import easyocr
+reader = easyocr.Reader(['ch_sim','en']) # need to run only once to load model into memory
+result = reader.readtext('chinese.jpg')
+# 输出
+[([[189, 75], [469, 75], [469, 165], [189, 165]], '愚园路', 0.3754989504814148),
+ ([[86, 80], [134, 80], [134, 128], [86, 128]], '西', 0.40452659130096436),
+ ([[517, 81], [565, 81], [565, 123], [517, 123]], '东', 0.9989598989486694),
+ ([[78, 126], [136, 126], [136, 156], [78, 156]], '315', 0.8125889301300049),
+ ([[514, 126], [574, 126], [574, 156], [514, 156]], '309', 0.4971577227115631),
+ ([[226, 170], [414, 170], [414, 220], [226, 220]], 'Yuyuan Rd.', 0.8261902332305908),
+ ([[79, 173], [125, 173], [125, 213], [79, 213]], 'W', 0.9848111271858215),
+ ([[529, 173], [569, 173], [569, 213], [529, 213]], 'E', 0.8405593633651733)]
+```
 
-<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
+
+31、[examples](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/pytorch/examples)：关于视觉、本文等方面的 PyTorch 的示例集合。包含：使用 Convnets 的图像分类（MNIST）、生成对抗网络（DCGAN）等
+
 
 
 
 <p align="center">
-    <a href="https://github.com/521xueweihan/HelloGitHub/blob/master/content/HelloGitHub19.md">『上一期』</a> | <a href='https://github.com/521xueweihan/HelloGitHub/issues/899'>反馈和建议</a> | <a href="https://github.com/521xueweihan/HelloGitHub/blob/master/content/HelloGitHub21.md">『下一期』</a>
+    <a href="https://github.com/521xueweihan/HelloGitHub/blob/master/content/HelloGitHub55.md">『上一期』</a> | <a href='https://github.com/521xueweihan/HelloGitHub/issues/899'>反馈和建议</a> | <a href="https://github.com/521xueweihan/HelloGitHub/blob/master/content/HelloGitHub57.md">『下一期』</a>
 </p>
 
 ---
@@ -230,7 +360,7 @@ with open('report.xls', 'wb') as f:
     👉 <a href='https://hellogithub.com/periodical'>推荐项目</a> 👈<br>
     微信中搜：<strong>HelloGitHub</strong> 关注公众号<br>
     不仅能第一时间收到推送，还有各种回馈粉丝活动<br>
-    如果文中的图刷不出来，可以点击 <a href='https://hellogithub.com/periodical/volume/20'>这里</a> 获取更好的阅读体验。
+    如果文中的图刷不出来，可以点击 <a href='https://hellogithub.com/periodical/volume/56'>这里</a> 获取更好的阅读体验。
 </p>
 
 ## 声明
