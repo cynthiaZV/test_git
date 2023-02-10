@@ -1,235 +1,89 @@
-# 《HelloGitHub》第 20 期
-> 兴趣是最好的老师，**HelloGitHub** 让你对编程感兴趣！
 <p align="center">
-    <img src='https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/cover.jpg' style="max-width:100%;"></img>
+  <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/readme.gif"/>
+  <br>中文 | <a href="README_en.md">English</a>
+  <br>分享 GitHub 上有趣、入门级的开源项目。<br>兴趣是最好的老师，这里能够帮你找到编程的兴趣！
 </p>
 
-## 目录
-
-**Tips**：如果文中的图刷不出来，可以点击 [这里](https://hellogithub.com/periodical/volume/20) 获取更好的阅读体验。
-
-- [C# 项目](https://github.com/521xueweihan/test_git/blob/master/readme.md#c-项目)
-- [C++ 项目](https://github.com/521xueweihan/test_git/blob/master/readme.md#c-项目-1)
-- [CSS 项目](https://github.com/521xueweihan/test_git/blob/master/readme.md#css-项目)
-- [Go 项目](https://github.com/521xueweihan/test_git/blob/master/readme.md#go-项目)
-- [Java 项目](https://github.com/521xueweihan/test_git/blob/master/readme.md#java-项目)
-- [JavaScript 项目](https://github.com/521xueweihan/test_git/blob/master/readme.md#javascript-项目)
-- [Kotlin 项目](https://github.com/521xueweihan/test_git/blob/master/readme.md#kotlin-项目)
-- [Python 项目](https://github.com/521xueweihan/test_git/blob/master/readme.md#python-项目)
-- [其它](https://github.com/521xueweihan/test_git/blob/master/readme.md#其它)
-- [机器学习](https://github.com/521xueweihan/test_git/blob/master/readme.md#机器学习)
-
-
-- [返回首页](https://github.com/521xueweihan/HelloGitHub#%E5%86%85%E5%AE%B9)
-
 <p align="center">
-  <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/weixin.png" style="max-width:30%;"></img><br>
-关注「HelloGitHub」公众号，第一时间收到推送
+  <a href="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/weixin.png"><img src="https://img.shields.io/badge/Talk-%E5%BE%AE%E4%BF%A1%E7%BE%A4-brightgreen.svg?style=popout-square" alt="WeiXin"></a>
+  <a href="https://github.com/521xueweihan/HelloGitHub/stargazers"><img src="https://img.shields.io/github/stars/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub stars"></a>
+  <a href="https://github.com/521xueweihan/HelloGitHub/issues"><img src="https://img.shields.io/github/issues/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub issues"></a>
+    <a href="https://weibo.com/hellogithub"><img src="https://img.shields.io/badge/%E6%96%B0%E6%B5%AA-Weibo-red.svg?style=popout-square" alt="Sina Weibo"></a>
 </p>
+
+## 简介
+
+HelloGitHub 分享 GitHub 上有趣、入门级的开源项目。**每月 28 号**以月刊的形式[更新发布](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA5MzYyNzQ0MQ==&action=getalbum&album_id=1331197538447310849#wechat_redirect)，内容包括：**有趣、入门级的开源项目**、**开源书籍**、**实战项目**、**企业级项目**等，让你用很短时间感受到开源的魅力，爱上开源！
 
 ## 内容
-> **以下为本期内容**｜每个月 **28** 号更新
-
-### C# 项目
-1、[csharplang](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/dotnet/csharplang)：C# 语言设计官方项目，在这里你可以直接参与讨论。同时还有：
-- 语言特色提议
-- C# 语言设计会议记要
-- 完整的 C# 6 语言规范（草案）
-- 语言版本历史摘要
-
-
-<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
-
-### C++ 项目
-2、[robomongo](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/Studio3T/robomongo)：免费、开源的 MongoDB 跨平台桌面管理工具，支持 Windows、Linux、Mac
-
-
-<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/20/6580000.png' style="max-width:80%; max-height=80%;"></img></p>
-
-<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
-
-### CSS 项目
-3、[magic-of-css](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/adamschwartz/magic-of-css)：一套可以让你成为“魔术师”的 CSS 教程（英文）
-
-
-4、[milligram](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/milligram/milligram)：极简风格的 CSS 框架，而且文件很小
-
-
-<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/20/47775741.png' style="max-width:80%; max-height=80%;"></img></p>
-
-<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
-
-### Go 项目
-5、[monkey](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/haifenghuang/monkey)：用 Go 语言写的解析器，包含诸多语言特性。入门实践项目，适合新手熟悉 Go 语言和语言解析器入门
-
-
-<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
-
-### Java 项目
-6、[Android-Pay](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/mayubao/Android-Pay)：支持微信和支付宝两种主流支付的集成库，示例代码如下：
-```java
-//1.创建微信支付请求
-WechatPayReq wechatPayReq = new WechatPayReq.Builder()
-        .with(this) //activity实例
-        .setAppId(appid) //微信支付AppID
-        .setPartnerId(partnerid)//微信支付商户号
-        .setPrepayId(prepayid)//预支付码
-//      .setPackageValue(wechatPayReq.get)//"Sign=WXPay"
-        .setNonceStr(noncestr)
-        .setTimeStamp(timestamp)//时间戳
-        .setSign(sign)//签名
-        .create();
-//2.发送微信支付请求
-PayAPI.getInstance().sendPayRequest(wechatPayReq);
-
-//关于微信支付的回调
-//wechatPayReq.setOnWechatPayListener(new OnWechatPayListener);
-```
-
-
-7、[AndroidSwipeLayout](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/daimajia/AndroidSwipeLayout)：[代码家](https://github.com/daimajia)开源的滑动布局库，不用多说什么了。动起手来试试，然后通过阅读代码学习大神们的编程技巧，有一天你也可以做出有价值、流行的开源库
-
-
-<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/20/23301468.gif' style="max-width:80%; max-height=80%;"></img></p>
-
-<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
-
-### JavaScript 项目
-8、[flowhub](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/yyued/flowhub)：仅 6KB 通过简单的 API & 自由组合的链式写法，轻松订阅管理各类事件流。示例代码如下：
-```javascript
-import $hub from 'hub-js';
-
-// 定义一个 “test” 监听器
-$hub.listen('test', ( data ) => {
-    console.log( 'test', data );
-});
-
-setInterval(( ) => {
-    // 发出 “test” 事件
-    $hub.emit('test', { code: 1 });
-}, 1000);
-```
-
-
-9、[IDValidator](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/mc-zone/IDValidator)：中国大陆个人身份证号验证，支持 15、18 位身份证号，API 如下：
-- `isValid` 验证号码是否合法，合法返回 True，不合法返回 False
-- `getInfo` 号码合法时返回分析信息（地区、出生日期、性别、校验位），不合法返回 False
-- `makeID` 伪造一个符合校验的 ID
-
-
-10、[livepython](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/agermanidis/livepython)：可视化、实时追踪展示 Python 代码
-
-
-<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/20/105598718.gif' style="max-width:80%; max-height=80%;"></img></p>
-
-11、[nba-go](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/homerchen19/nba-go)：可以用命令终端查看 NBA 比赛，包括比赛开始时间表、实时比分情况、文字直播（英文）等。终端看 NBA，你才是最潮的。安装命令 `npm install -g nba-go`
-
-
-<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/20/108231108.png' style="max-width:80%; max-height=80%;"></img></p>
-
-12、[React-Cnode](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/Juliiii/React-Cnode)：适合新手的 React 全家桶项目学习，同时附有作者在开发中的一些[思考](http://www.jianshu.com/p/43c604177c08)
-
-
-<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/20/101363122.gif' style="max-width:80%; max-height=80%;"></img></p>
-
-<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
-
-### Kotlin 项目
-13、[Flesh](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/Kerr1Gan/Flesh)：如果你是一位想学习一下 Kotlin 的同学，那么 Flesh 是一个适合学习、练手、入门的项目。从中可以学到 Java 与 Kotlin 间的相互调用、爬虫操作。这是个诚意（福利）满满的项目，快去下载、加入到这个项目中吧
-
-
-<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/20/102702014.gif' style="max-width:80%; max-height=80%;"></img></p>
-
-14、[kotlin-guides](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/android/kotlin-guides)：这份指南提供了在使用 Kotlin 编写 Android 程序时要遵循的一系列规则
-
-
-<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
-
-### Python 项目
-15、[joblib](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/joblib/joblib)：使用 Python 方便的进行并行计算，示例代码如下：
-```python
-from joblib import Parallel, delayed
-from math import sqrt
-Parallel(n_jobs=1)(delayed(sqrt)(i**2) for i in range(10))
-```
-
-
-16、[records](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/kennethreitz/records)：Kenneth Reitz 大神的`for Humans™`系列，Records 是一个支持大多数主流关系数据库的原生 SQL 查询第三方库。API 友好，使用简单、支持命令行模式、功能多样。与此同时该库只有 500 行代码，可以当作入门阅读源码的项目，同时学习大神的编程技巧与习惯，示例代码如下：
-```python
-import records
-
-db = records.Database('postgres://...')  # 连接数据库
-rows = db.query('select * from active_users')  # 执行原生 SQL
-# 遍历结果
-for r in rows:
-    print(r.name, r.user_email)
-
-# 友好的 print 格式
-print(rows.dataset)
-# username|active|name      |user_email       |timezone
-# --------|------|----------|-----------------|--------------------------
-# model-t |True  |Henry Ford|model-t@gmail.com|2016-02-06 22:28:23.894202
-
-# 支持将结果导出成不同格式
-print(rows.export('json'))  # json
-print(rows.export('csv'))  # csv
-print(rows.export('yaml')) # yaml
-rows.export('df')  # pandas 的 df 对象
-with open('report.xls', 'wb') as f:
-    f.write(rows.export('xls'))  # xls
-```
-
-
-17、[tldr-python-client](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/tldr-pages/tldr-python-client)：Linux man 解释一般都太长了，很多时候我们就想用一些比较常用的命令，但却记不起来。这个时候如果不 Google，就可以用 [tldr（简化 man 的工程）](https://github.com/tldr-pages/tldr)。该项目为 Python 客户端实现
-
-
-<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/20/17429141.png' style="max-width:80%; max-height=80%;"></img></p>
-
-18、[zdict](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/zdict/zdict)：方便的终端字典工具，支持多种字典和参数、翻译结果高亮、以及交互模式查询。安装命令 `pip install zdict` （仅支持 Python3）。查询效果如下图所示：
-
-
-<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/20/34254274.png' style="max-width:80%; max-height=80%;"></img></p>
-
-<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
-
-### 其它
-19、[github-cheat-sheet](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/tiimgreen/github-cheat-sheet)：GitHub 和 Git 的秘籍，[中文](https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md)
-
-
-20、[hangzhouYunQi2017ppt](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/Alibaba-Technology/hangzhouYunQi2017ppt)：2017 杭州云栖大会精华 PPT，[移步到阿里云下载与浏览](https://yq.aliyun.com/articles/231065)
-
-
-21、[nodebestpractices](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/goldbergyoni/nodebestpractices)：Node.js 最佳实践列表（英文）
-
-
-22、[vim-game-code-break](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/johngrib/vim-game-code-break)：Vim 中的打砖块游戏
-
-
-<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/20/94041124.gif' style="max-width:80%; max-height=80%;"></img></p>
-
-<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
-
-### 机器学习
-23、[angel](https://hellogithub.com/periodical/statistics/click/?target=https://github.com/Angel-ML/angel)：腾讯开源的高性能分布式机器学习平台，具有广泛的适用性和稳定性，模型维度越高。它将高维度的大模型合理切分到多个参数服务器节点，并通过高效的模型更新接口和运算函数，以及灵活的同步协议，可以实现各种高效的机器学习算法
-
-
-<p align="center"><img src='https://raw.githubusercontent.com/521xueweihan/img/master/hellogithub/20/89322848.png' style="max-width:80%; max-height=80%;"></img></p>
-
-<p align="center"><a href="#目录">🔙 返回目录 🔙</a></p><br>
-
-
-
-<p align="center">
-    <a href="https://github.com/521xueweihan/HelloGitHub/blob/master/content/HelloGitHub19.md">『上一期』</a> | <a href='https://github.com/521xueweihan/HelloGitHub/issues/899'>反馈和建议</a> | <a href="https://github.com/521xueweihan/HelloGitHub/blob/master/content/HelloGitHub21.md">『下一期』</a>
-</p>
-
----
-<p align="center">
-    👉 <a href='https://hellogithub.com/periodical'>推荐项目</a> 👈<br>
-    微信中搜：<strong>HelloGitHub</strong> 关注公众号<br>
-    不仅能第一时间收到推送，还有各种回馈粉丝活动<br>
-    如果文中的图刷不出来，可以点击 <a href='https://hellogithub.com/periodical/volume/20'>这里</a> 获取更好的阅读体验。
-</p>
+获得更好的阅读体验 [官网](https://hellogithub.com/) 或 [HelloGitHub 公众号](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png)
+
+| :card_index: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
+| ------- | ----- | ------------ | ------ | --------- |
+| [第 82 期](/content/HelloGitHub82.md) | [第 81 期](/content/HelloGitHub81.md) |
+| [第 80 期](/content/HelloGitHub80.md) | [第 79 期](/content/HelloGitHub79.md) | [第 78 期](/content/HelloGitHub78.md) | [第 77 期](/content/HelloGitHub77.md) | [第 76 期](/content/HelloGitHub76.md) |
+| [第 75 期](/content/HelloGitHub75.md) | [第 74 期](/content/HelloGitHub74.md) | [第 73 期](/content/HelloGitHub73.md) | [第 72 期](/content/HelloGitHub72.md) | [第 71 期](/content/HelloGitHub71.md) |
+| [第 70 期](/content/HelloGitHub70.md) | [第 69 期](/content/HelloGitHub69.md) | [第 68 期](/content/HelloGitHub68.md) | [第 67 期](/content/HelloGitHub67.md) | [第 66 期](/content/HelloGitHub66.md) |
+| [第 65 期](/content/HelloGitHub65.md) | [第 64 期](/content/HelloGitHub64.md) | [第 63 期](/content/HelloGitHub63.md) | [第 62 期](/content/HelloGitHub62.md) | [第 61 期](/content/HelloGitHub61.md) |
+| [第 60 期](/content/HelloGitHub60.md) | [第 59 期](/content/HelloGitHub59.md) | [第 58 期](/content/HelloGitHub58.md) | [第 57 期](/content/HelloGitHub57.md) | [第 56 期](/content/HelloGitHub56.md) |
+| [第 55 期](/content/HelloGitHub55.md) | [第 54 期](/content/HelloGitHub54.md) | [第 53 期](/content/HelloGitHub53.md) | [第 52 期](/content/HelloGitHub52.md) | [第 51 期](/content/HelloGitHub51.md) |
+| [第 50 期](/content/HelloGitHub50.md) | [第 49 期](/content/HelloGitHub49.md) | [第 48 期](/content/HelloGitHub48.md) | [第 47 期](/content/HelloGitHub47.md) | [第 46 期](/content/HelloGitHub46.md) |
+| [第 45 期](/content/HelloGitHub45.md) | [第 44 期](/content/HelloGitHub44.md) | [第 43 期](/content/HelloGitHub43.md) | [第 42 期](/content/HelloGitHub42.md) | [第 41 期](/content/HelloGitHub41.md) |
+| [第 05 期](/content/HelloGitHub05.md) | [第 04 期](/content/HelloGitHub04.md) | [第 03 期](/content/HelloGitHub03.md) | [第 02 期](/content/HelloGitHub02.md) | [第 01 期](/content/HelloGitHub01.md) |
+
+欢迎[推荐或自荐](https://hellogithub.com/periodical)项目成为 **HelloGitHub** 的[贡献者](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md)
+
+## 赞助
+
+<table>
+  <thead>
+    <tr>
+      <th align="center" style="width: 80px;">
+        <a href="https://www.upyun.com/">
+          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/upyun.png" width="60px"><br>
+          <sub>CDN</sub><br>
+          <sub>开启全网加速</sub>
+        </a>
+      </th>
+      <th align="center" style="width: 80px;">
+        <a href="https://doc.rentsoft.cn/">
+          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/im.png" width="60px"><br>
+          <sub>OpenIM</sub><br>
+          <sub>开源IM力争No.1</sub>
+        </a>
+      </th>
+      <th align="center" style="width: 80px;">
+        <a href="https://github.com/yomorun/yomo">
+          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/yomo.jpeg" width="60px"><br>
+          <sub>YoMo</sub><br>
+          <sub>低时延交互编程框架</sub>
+        </a>
+      </th>
+      <th align="center" style="width: 80px;">
+        <a href="https://apifox.cn/a103hello">
+          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/apifox.png" width="60px"><br>
+          <sub>Apifox</sub><br>
+          <sub>比 Postman 更强大</sub>
+        </a>
+      </th>
+      <th align="center" style="width: 80px;">
+        <a href="https://he3.app?utm_source=hellogithub&utm_medium=github&utm_campaign=hellogithub">
+          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/he3.png" width="60px"><br>
+          <sub>He3</sub><br>
+          <sub>开发者必备工具箱</sub>
+        </a>
+      </th>
+      <th align="center" style="width: 80px;">
+        <a href="https://github.com/jina-ai/jina">
+          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/jina.png" width="60px"><br>
+          <sub>Jina AI</sub><br>
+          <sub>多模态数据+生成式AI</sub>
+        </a>
+      </th>
+    </tr>
+  </thead>
+</table>
 
 ## 声明
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>本作品采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">署名-非商业性使用-禁止演绎 4.0 国际</a> 进行许可。
+
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>本作品采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">署名-非商业性使用-禁止演绎 4.0 国际</a> 进行许可。<a href="mailto:595666367@qq.com">联系我</a>
