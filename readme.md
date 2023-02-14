@@ -74,10 +74,10 @@ HelloGitHub 分享 GitHub 上有趣、入门级的开源项目。**每月 28 号
         </a>
       </th>
       <th align="center" style="width: 80px;">
-        <a href="https://github.com/jina-ai/jina">
+        <a href="https://rebrand.ly/jina-hg">
           <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/jina.png" width="60px"><br>
           <sub>Jina AI</sub><br>
-          <sub>多模态数据+生成式AI</sub>
+          <sub>5 分钟解锁多模态 AI</sub>
         </a>
       </th>
     </tr>
