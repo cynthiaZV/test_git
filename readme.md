@@ -1,89 +1,232 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/readme.gif"/>
-  <br>中文 | <a href="README_en.md">English</a>
-  <br>分享 GitHub 上有趣、入门级的开源项目。<br>兴趣是最好的老师，这里能够帮你找到编程的兴趣！
+<p style="" align="center">
+  <img src="./doc/logo.png" alt="Logo" width="350" height="200">
 </p>
 
-<p align="center">
-  <a href="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/weixin.png"><img src="https://img.shields.io/badge/Talk-%E5%BE%AE%E4%BF%A1%E7%BE%A4-brightgreen.svg?style=popout-square" alt="WeiXin"></a>
-  <a href="https://github.com/521xueweihan/HelloGitHub/stargazers"><img src="https://img.shields.io/github/stars/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub stars"></a>
-  <a href="https://github.com/521xueweihan/HelloGitHub/issues"><img src="https://img.shields.io/github/issues/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub issues"></a>
-    <a href="https://weibo.com/hellogithub"><img src="https://img.shields.io/badge/%E6%96%B0%E6%B5%AA-Weibo-red.svg?style=popout-square" alt="Sina Weibo"></a>
-</p>
+## 一、介绍
 
-## 简介
+`VideoPipe` 是一个用于视频分析和结构化的框架，它就像一个管道每个节点相互独立可自行搭配，用来构建不同类型的视频分析管道，适用于视频结构化、图片搜索、人脸识别、安防领域的行为分析（如交通事件检测）等场景。
 
-HelloGitHub 分享 GitHub 上有趣、入门级的开源项目。**每月 28 号**以月刊的形式[更新发布](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA5MzYyNzQ0MQ==&action=getalbum&album_id=1331197538447310849#wechat_redirect)，内容包括：**有趣、入门级的开源项目**、**开源书籍**、**实战项目**、**企业级项目**等，让你用很短时间感受到开源的魅力，爱上开源！
+![](./doc/g1.gif)
 
-## 内容
-获得更好的阅读体验 [官网](https://hellogithub.com/) 或 [HelloGitHub 公众号](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png)
+## 二、优势和特点
 
-| :card_index: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
-| ------- | ----- | ------------ | ------ | --------- |
-| [第 82 期](/content/HelloGitHub82.md) | [第 81 期](/content/HelloGitHub81.md) |
-| [第 80 期](/content/HelloGitHub80.md) | [第 79 期](/content/HelloGitHub79.md) | [第 78 期](/content/HelloGitHub78.md) | [第 77 期](/content/HelloGitHub77.md) | [第 76 期](/content/HelloGitHub76.md) |
-| [第 75 期](/content/HelloGitHub75.md) | [第 74 期](/content/HelloGitHub74.md) | [第 73 期](/content/HelloGitHub73.md) | [第 72 期](/content/HelloGitHub72.md) | [第 71 期](/content/HelloGitHub71.md) |
-| [第 70 期](/content/HelloGitHub70.md) | [第 69 期](/content/HelloGitHub69.md) | [第 68 期](/content/HelloGitHub68.md) | [第 67 期](/content/HelloGitHub67.md) | [第 66 期](/content/HelloGitHub66.md) |
-| [第 65 期](/content/HelloGitHub65.md) | [第 64 期](/content/HelloGitHub64.md) | [第 63 期](/content/HelloGitHub63.md) | [第 62 期](/content/HelloGitHub62.md) | [第 61 期](/content/HelloGitHub61.md) |
-| [第 60 期](/content/HelloGitHub60.md) | [第 59 期](/content/HelloGitHub59.md) | [第 58 期](/content/HelloGitHub58.md) | [第 57 期](/content/HelloGitHub57.md) | [第 56 期](/content/HelloGitHub56.md) |
-| [第 55 期](/content/HelloGitHub55.md) | [第 54 期](/content/HelloGitHub54.md) | [第 53 期](/content/HelloGitHub53.md) | [第 52 期](/content/HelloGitHub52.md) | [第 51 期](/content/HelloGitHub51.md) |
-| [第 50 期](/content/HelloGitHub50.md) | [第 49 期](/content/HelloGitHub49.md) | [第 48 期](/content/HelloGitHub48.md) | [第 47 期](/content/HelloGitHub47.md) | [第 46 期](/content/HelloGitHub46.md) |
-| [第 45 期](/content/HelloGitHub45.md) | [第 44 期](/content/HelloGitHub44.md) | [第 43 期](/content/HelloGitHub43.md) | [第 42 期](/content/HelloGitHub42.md) | [第 41 期](/content/HelloGitHub41.md) |
-| [第 05 期](/content/HelloGitHub05.md) | [第 04 期](/content/HelloGitHub04.md) | [第 03 期](/content/HelloGitHub03.md) | [第 02 期](/content/HelloGitHub02.md) | [第 01 期](/content/HelloGitHub01.md) |
+`VideoPipe` 类似于英伟达的 DeepStream 和华为的 mxVision 框架，但它更易于使用、更具备可移植性。
 
-欢迎[推荐或自荐](https://hellogithub.com/periodical)项目成为 **HelloGitHub** 的[贡献者](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md)
+|名称|是否开源|学习门槛|适用平台|性能|三方依赖|
+|--|--|--|--|--|--|
+|DeepStream|否|高|仅限英伟达|高|多|
+|mxVision|否|高|仅限华为|高|多|
+|VideoPipe|是|低|不限平台|中|少|
 
-## 赞助
+它采用面向插件的编码风格，可以根据不同的需求按需搭配，使用独立的插件，即框架中的 Node 类型，构建出不同类型的视频分析应用。你只需准备好模型并了解如何解析其输出即可，推理可以基于不同的后端实现，如 OpenCV::DNN（默认）、TensorRT、PaddleInference、ONNXRuntime 等，任何你喜欢的都可以。
 
-<table>
-  <thead>
-    <tr>
-      <th align="center" style="width: 80px;">
-        <a href="https://www.upyun.com/">
-          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/upyun.png" width="60px"><br>
-          <sub>CDN</sub><br>
-          <sub>开启全网加速</sub>
-        </a>
-      </th>
-      <th align="center" style="width: 80px;">
-        <a href="https://doc.rentsoft.cn/">
-          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/im.png" width="60px"><br>
-          <sub>OpenIM</sub><br>
-          <sub>开源IM力争No.1</sub>
-        </a>
-      </th>
-      <th align="center" style="width: 80px;">
-        <a href="https://github.com/yomorun/yomo">
-          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/yomo.jpeg" width="60px"><br>
-          <sub>YoMo</sub><br>
-          <sub>低时延交互编程框架</sub>
-        </a>
-      </th>
-      <th align="center" style="width: 80px;">
-        <a href="https://apifox.cn/a103hello">
-          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/apifox.png" width="60px"><br>
-          <sub>Apifox</sub><br>
-          <sub>比 Postman 更强大</sub>
-        </a>
-      </th>
-      <th align="center" style="width: 80px;">
-        <a href="https://he3.app?utm_source=hellogithub&utm_medium=github&utm_campaign=hellogithub">
-          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/he3.png" width="60px"><br>
-          <sub>He3</sub><br>
-          <sub>开发者必备工具箱</sub>
-        </a>
-      </th>
-      <th align="center" style="width: 80px;">
-        <a href="https://rebrand.ly/jina-hg">
-          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/jina_ai.png" width="60px"><br>
-          <sub>Jina AI</sub><br>
-          <sub>5 分钟解锁多模态 AI</sub>
-        </a>
-      </th>
-    </tr>
-  </thead>
-</table>
+![](./doc/g2.png)
 
-## 声明
+## 三、演示
 
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>本作品采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">署名-非商业性使用-禁止演绎 4.0 国际</a> 进行许可。<a href="mailto:595666367@qq.com">联系我</a>
+https://github.com/sherlockchou86/video_pipe_c/assets/13251045/b1289faa-e2c7-4d38-871e-879ae36f6d50
+
+播放器右下角全屏观看，[更多视频演示](./SAMPLES.md)
+
+## 四、功能
+
+VideoPipe 是一个让计算机视觉的模型集成更加简单的框架，它并不是像 TensorFlow、TensorRT 类似的深度学习框架。主要功能如下：
+
+- 流读取/推送：⽀持主流的视频流协议，如 udp、rtsp、rtmp、文件。
+- 视频解码/编码：⽀持基于 OpenCV/GStreamer 的视频和图片解/编码（⽀持硬件加速）。
+- 基于深度学习的算法推理：⽀持基于深度学习算法的多级推理，例如⽬标检测、图像分类、特征提取。
+- ⽬标跟踪：⽀持⽬标追踪，例如 IOU、SORT 跟踪算法等。
+- ⾏为分析（BA）：⽀持基于跟踪的⾏为分析，例如越线、停⻋、违章等交通判断。
+- 数据代理：⽀持将结构化数据（json/xml/⾃定义格式）以 kafka/Sokcet 等⽅式推送到云端、文件或其他
+第三⽅平台。
+- 录制：⽀持特定时间段的视频录制，特定帧的截图。
+- 屏幕显⽰（OSD）：支持将模型输出结果绘制到帧上。
+
+## 五、快速上手
+
+### 5.1 依赖
+
+平台
+- Ubuntu 18.04 x86_64 NVIDIA rtx/tesla GPUs
+- Ubuntu 18.04 aarch64 NVIDIA jetson serials device，tx2 tested
+- Ubuntu 18.04 x86_64 Cambrian MLU serials device, MLU 370 tested (code not provided)
+- Wait for your test
+
+基础
+- C++ 17
+- OpenCV >= 4.6
+- GStreamer 1.20 (Required by OpenCV)
+- GCC >= 7.5
+
+可选，如果你需要实现自己的推理后端，或者使用除 `opencv::dnn` 之外的其他推理后端.
+- CUDA
+- TensorRT
+- Paddle Inference
+- ONNX Runtime
+- Anything you like
+
+[如何安装CUDA和TensorRT](./third_party/trt_vehicle/README.md)
+
+[如何安装Paddle_Inference](./third_party/paddle_ocr/README.md)
+
+### 5.2 编译和调试
+
+1. 运行 `git clone https://github.com/sherlockchou86/video_pipe_c.git`
+2. 运行 `cd video_pipe_c`
+3. 运行 `mkdir build && cd build`
+4. 运行 `cmake ..`
+5. 运行 `make -j8`
+
+编译完成后，所有的库文件存放在 `build/libs` 中，所有的 Sample 运行文件存放在 `build/bin` 中。在执行第 4 步的时候，可以添加一些编译选项：
+- -DVP_WITH_CUDA=ON （编译 CUDA 相关功能，默认为 OFF）
+- -DVP_WITH_TRT=ON （编译 TensorRT 相关功能和 Samples，默认为 OFF）
+- -DVP_WITH_PADDLE=ON （编译 PaddlePaddle 相关功能和 Samples，默认为 OFF）
+- -DVP_BUILD_COMPLEX_SAMPLES=ON （编译高级 Samples，默认为 OFF）
+
+比如需要开启CUDA和TensorRT相关的模块，可以运行 `cmake -DVP_WITH_CUDA=ON -DVP_WITH_TRT=ON ..`。如果只运行 `cmake ..`，那么所有代码运行在 CPU 上。
+
+```
+# 开启全部
+cmake -DVP_WITH_CUDA=ON -DVP_WITH_TRT=ON -DVP_WITH_PADDLE=ON -DVP_BUILD_COMPLEX_SAMPLES=ON ..
+# 关闭全部（默认）
+cmake ..
+```
+
+如果要运行编译生成的 Samples，先下载模型文件和测试数据：
+
+1. [谷歌网盘下载测试文件和模型](https://drive.google.com/drive/folders/1v9dVcR6xttUTB-WPsH3mZ_ZZMzD4wG-v?usp=sharing)
+2. [百度网盘下载测试文件和模型](https://pan.baidu.com/s/1jr2nBnEDmuNaM5DiMjbC0g?pwd=nf53)
+
+将下载好的目录（名称为 vp_data）放在任何位置（比如放在 `/root/abc` 下面），然后在 `同一目录` 下运行 Sample，比如在 `/root/abc` 下面执行命名：`[path to video_pipe_c]/build/bin/1-1-1_sample` 即可运行 1-1-1_sample。
+
+**注意**：`./third_party/` 下面都是独立的项目，有的是 header-only 库，被 VideoPipe 直接引用；有的包含有 cpp 文件，可以独立编译或运行，VideoPipe 依赖这些库，在编译 VideoPipe 的过程中会自动编译这些库。这些库也包含自己的 Samples，具体使用方法可参见对应子目录下的 README 文件.
+
+### 5.3 如何使用
+
+1. 先将 VideoPipe 编译成库，然后引用它.
+2. 或者直接引用源代码，然后编译整个 application.
+
+下面是一个如何构建 Pipeline 然后运行的 Sample(请先修改代码中的相关文件路径)：
+
+```c++
+#include "../nodes/vp_file_src_node.h"
+#include "../nodes/infers/vp_yunet_face_detector_node.h"
+#include "../nodes/infers/vp_sface_feature_encoder_node.h"
+#include "../nodes/osd/vp_face_osd_node_v2.h"
+#include "../nodes/vp_screen_des_node.h"
+#include "../nodes/vp_rtmp_des_node.h"
+#include "../utils/analysis_board/vp_analysis_board.h"
+
+/*
+* 名称：1-1-N sample
+* 完整代码位于：samples/1-1-N_sample.cpp
+* 功能说明：1个视频输入，1个视频分析任务（人脸检测和识别），2个输出（屏幕输出/RTMP推流输出）
+*/
+
+int main() {
+    VP_SET_LOG_INCLUDE_CODE_LOCATION(false);
+    VP_SET_LOG_INCLUDE_THREAD_ID(false);
+    VP_LOGGER_INIT();
+
+    // 1、创建节点
+    // 视频获取 Node
+    auto file_src_0 = std::make_shared<vp_nodes::vp_file_src_node>("file_src_0", 0, "./test_video/10.mp4", 0.6);
+    // 2、模型推理 Node
+    // 一级推理：人脸检测
+    auto yunet_face_detector_0 = std::make_shared<vp_nodes::vp_yunet_face_detector_node>("yunet_face_detector_0", "./models/face/face_detection_yunet_2022mar.onnx");
+    // 二级推理：人脸识别
+    auto sface_face_encoder_0 = std::make_shared<vp_nodes::vp_sface_feature_encoder_node>("sface_face_encoder_0", "./models/face/face_recognition_sface_2021dec.onnx");
+    // 3、OSD Node
+    // 处理结果绘制到帧上
+    auto osd_0 = std::make_shared<vp_nodes::vp_face_osd_node_v2>("osd_0");
+    // 屏幕展示
+    auto screen_des_0 = std::make_shared<vp_nodes::vp_screen_des_node>("screen_des_0", 0);
+    // 推流展示
+    auto rtmp_des_0 = std::make_shared<vp_nodes::vp_rtmp_des_node>("rtmp_des_0", 0, "rtmp://192.168.77.60/live/10000");
+
+    // 构建管道，将节点的处理结果关联起来
+    yunet_face_detector_0->attach_to({file_src_0});
+    sface_face_encoder_0->attach_to({yunet_face_detector_0});
+    osd_0->attach_to({sface_face_encoder_0});
+
+    // 管道自动拆分，通过屏幕/推流输出结果
+    screen_des_0->attach_to({osd_0});
+    rtmp_des_0->attach_to({osd_0});
+
+    // 启动管道
+    file_src_0->start();
+
+    // 可视化管道
+    vp_utils::vp_analysis_board board({file_src_0});
+    board.display();
+}
+```
+上面代码运行后，会出现 3 个画面:
+1. 管道的运行状态图，状态自动刷新
+2. 屏幕显示结果（GUI）
+3. 播放器显示结果（RTMP）
+
+![](./doc/g3.png)
+
+
+## 5.4 案例原型
+|id|sample|screenshot|
+|--|--|--|
+|1|1-1-1_sample|![](./doc//p10.png)|
+|2|1-1-N_sample|![](./doc//p11.png)|
+|3|1-N-N_sample|![](./doc//p12.png)|
+|4|N-1-N_sample|![](./doc//p13.png)|
+|5|N-N_sample|![](./doc//p14.png)|
+|6|paddle_infer_sample|![](./doc//p15.png)|
+|7|src_des_sample|![](./doc//p16.png)|
+|8|trt_infer_sample|![](./doc//p17.png)|
+|9|vp_logger_sample|-|
+|10|face_tracking_sample|![](./doc//p18.png)|
+|11|vehicle_tracking_sample|![](./doc//p22.png)|
+|12|interaction with pipe sample|--|
+|13|record_sample|--|
+|14|message_broker_sample & message_broker_sample2|![](./doc//p21.png)|
+|15|mask_rcnn_sample|![](./doc//p30.png)|
+|16|openpose_sample|![](./doc//p31.png)|
+|17|enet_seg_sample|![](./doc//p32.png)|
+|18|multi detectors and classifiers sample|![](./doc//p33.png)|
+|19|image_des_sample|![](./doc//p34.png)|
+|20|image_src_sample|![](./doc//p35.png)|
+|21|rtsp_des_sample|![](./doc//p36.png)|
+|22|ba_crossline_sample|![](./doc//p37.png)|
+|23|plate_recognize_sample|![](./doc//p38.png)|
+|24|vehicle body scan sample|![](./doc/p40.png)|
+|25|body scan and plate detect sample|![](./doc/p39.png)|
+|26|app_src_sample|![](./doc/p41.png)|
+|27|vehicle cluster based on classify encoding sample|![](./doc/p42.png)|
+|28|ba_stop_sample|![](./doc/p49.png)|
+|29|behaviour analysis|![](./doc/p48.png)|
+|30|similiarity search|![](./doc/p44.png)![](./doc/p43.png)![](./doc/p45.png)|
+|31|property and similiarity search|![](./doc/p46.png)![](./doc/p47.png)|
+|32|ba_jam_sample|![](./doc/p50.png)|
+|33|face recognize|![](./doc/p51.png)|
+|34|license plate recognize(LPR) camera|![](./doc/p52.png)|
+|35|math expression check|![](./doc/p53.png)|
+|36|skip_sample|![](./doc/p54.png)|
+|37|obstacle_detect_sample|![](./doc/p55.png)|
+|38|firesmoke_detect_sample|![](./doc/p56.png)|
+|39|face_swap_sample|![](./doc/p57.png)|
+|40|video_restoration_sample|![](./doc/p58.png)|
+|41|app_des_sample|![](./doc/p59.png)|
+|42|app_src_des_sample|![](./doc/p60.png)|
+|43|lane_detect_sample|![](./doc/p61.png)|
+
+## 六、更多资料
+- [sample code](./sample/README.md)
+- [node table](./nodes/README.md)
+- [how VideoPipe works](./doc/about.md)
+- [how record works](./nodes/record/README.md)
+- [environment for reference](./doc/env.md)
+- :blush: wait for update...
+
+## 扫码入群交流
+![](./doc/vx.png)
+
+## 鸣谢
+
+<a href="https://hellogithub.com/repository/a32a1f2ad04a4b8aa4dd3e1b76c880b2" target="_blank"><img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=a32a1f2ad04a4b8aa4dd3e1b76c880b2" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a>
