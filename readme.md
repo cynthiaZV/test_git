@@ -2,7 +2,7 @@
   <img src="./doc/logo.png" alt="Logo" width="350" height="200">
 </p>
 
-<a href="https://hellogithub.com/repository/75ecb8e49b1b4091a5cd18137bd5a55f" target="_blank"><img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=75ecb8e49b1b4091a5cd18137bd5a55f&claim_uid=8MKvZoxaWt&theme=small" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+<a href="https://hellogithub.com/repository/75ecb8e49b1b4091a5cd18137bd5a55f" target="_blank"><img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=75ecb8e49b1b4091a5cd18137bd5a55f&claim_uid=8MKvZoxaWt&theme=small" alt="Featured｜HelloGitHub"/></a>
 
 ## 一、介绍
 
