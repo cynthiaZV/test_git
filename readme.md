@@ -2,6 +2,8 @@
   <img src="./doc/logo.png" alt="Logo" width="350" height="200">
 </p>
 
+<a href="https://hellogithub.com/repository/75ecb8e49b1b4091a5cd18137bd5a55f" target="_blank"><img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=75ecb8e49b1b4091a5cd18137bd5a55f&claim_uid=8MKvZoxaWt&theme=small" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+
 ## 一、介绍
 
 `VideoPipe` 是一个用于视频分析和结构化的框架，它就像一个管道每个节点相互独立可自行搭配，用来构建不同类型的视频分析管道，适用于视频结构化、图片搜索、人脸识别、安防领域的行为分析（如交通事件检测）等场景。
