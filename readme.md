@@ -1,233 +1,489 @@
-<p style="" align="center">
-  <img src="./doc/logo.png" alt="Logo" width="350" height="200">
-</p>
+<div align="center">
 
-<a href="https://hellogithub.com/repository/fe5744985a1d498280450563d217f099" target="_blank"><img src="https://frp.hellogithub.com/v1/widgets/recommend.svg?rid=fe5744985a1d498280450563d217f099&claim_uid=test&theme=small" alt="Featured｜HelloGitHub" /></a>
-## 一、介绍
+<img alt="hivision_logo" src="assets/hivision_logo.png" width=120 height=120>
+<h1>HivisionIDPhoto</h1>
 
-`VideoPipe` 是一个用于视频分析和结构化的框架，它就像一个管道每个节点相互独立可自行搭配，用来构建不同类型的视频分析管道，适用于视频结构化、图片搜索、人脸识别、安防领域的行为分析（如交通事件检测）等场景。
+[English](README_EN.md) / 中文 / [日本語](README_JP.md) / [한국어](README_KO.md)
 
-![](./doc/g1.gif)
+[![][release-shield]][release-link]
+[![][dockerhub-shield]][dockerhub-link]
+[![][github-stars-shield]][github-stars-link]
+[![][github-issues-shield]][github-issues-link]
+[![][github-contributors-shield]][github-contributors-link]
+[![][github-forks-shield]][github-forks-link]
+[![][license-shield]][license-link]  
+[![][wechat-shield]][wechat-link]
+[![][spaces-shield]][spaces-link]
+[![][swanhub-demo-shield]][swanhub-demo-link]
+[![][modelscope-shield]][modelscope-link]
+[![][modelers-shield]][modelers-link]
+[![][compshare-shield]][compshare-link]
 
-## 二、优势和特点
+[![][trendshift-shield]][trendshift-link]
+[![][hellogithub-shield]][hellogithub-link]
 
-`VideoPipe` 类似于英伟达的 DeepStream 和华为的 mxVision 框架，但它更易于使用、更具备可移植性。
+<img src="assets/demoImage.jpg" width=900>
 
-|名称|是否开源|学习门槛|适用平台|性能|三方依赖|
-|--|--|--|--|--|--|
-|DeepStream|否|高|仅限英伟达|高|多|
-|mxVision|否|高|仅限华为|高|多|
-|VideoPipe|是|低|不限平台|中|少|
+</div>
 
-它采用面向插件的编码风格，可以根据不同的需求按需搭配，使用独立的插件，即框架中的 Node 类型，构建出不同类型的视频分析应用。你只需准备好模型并了解如何解析其输出即可，推理可以基于不同的后端实现，如 OpenCV::DNN（默认）、TensorRT、PaddleInference、ONNXRuntime 等，任何你喜欢的都可以。
+> **相关项目**：
+>
+> - [SwanLab](https://github.com/SwanHubX/SwanLab)：一个开源、现代化设计的深度学习训练跟踪与可视化工具，同时支持云端/离线使用，国内好用的Wandb平替；适配30+主流框架（PyTorch、HuggingFace Transformers、LLaMA Factory、Lightning等），欢迎使用！
 
-![](./doc/g2.png)
 
-## 三、演示
+<br>
 
-https://github.com/sherlockchou86/video_pipe_c/assets/13251045/b1289faa-e2c7-4d38-871e-879ae36f6d50
+# 目录
 
-播放器右下角全屏观看，[更多视频演示](./SAMPLES.md)
+- [最近更新](#-最近更新)
+- [项目简介](#-项目简介)
+- [社区](#-社区)
+- [准备工作](#-准备工作)
+- [Demo启动](#-运行-gradio-demo)
+- [Python推理](#-python-推理)
+- [API服务部署](#️-部署-api-服务)
+- [Docker部署](#-docker-部署)
+- [联系我们](#-联系我们)
+- [FAQ](#faq)
+- [感谢支持](#-感谢支持)
+- [License](#-lincese)
+- [引用](#-引用)
 
-## 四、功能
+<br>
 
-VideoPipe 是一个让计算机视觉的模型集成更加简单的框架，它并不是像 TensorFlow、TensorRT 类似的深度学习框架。主要功能如下：
+# 🤩 最近更新
 
-- 流读取/推送：⽀持主流的视频流协议，如 udp、rtsp、rtmp、文件。
-- 视频解码/编码：⽀持基于 OpenCV/GStreamer 的视频和图片解/编码（⽀持硬件加速）。
-- 基于深度学习的算法推理：⽀持基于深度学习算法的多级推理，例如⽬标检测、图像分类、特征提取。
-- ⽬标跟踪：⽀持⽬标追踪，例如 IOU、SORT 跟踪算法等。
-- ⾏为分析（BA）：⽀持基于跟踪的⾏为分析，例如越线、停⻋、违章等交通判断。
-- 数据代理：⽀持将结构化数据（json/xml/⾃定义格式）以 kafka/Sokcet 等⽅式推送到云端、文件或其他
-第三⽅平台。
-- 录制：⽀持特定时间段的视频录制，特定帧的截图。
-- 屏幕显⽰（OSD）：支持将模型输出结果绘制到帧上。
+- 在线体验： [![SwanHub Demo](https://img.shields.io/static/v1?label=Demo&message=SwanHub%20Demo&color=blue)](https://swanhub.co/ZeYiLin/HivisionIDPhotos/demo)、[![Spaces](https://img.shields.io/badge/🤗-Open%20in%20Spaces-blue)](https://huggingface.co/spaces/TheEeeeLin/HivisionIDPhotos)、[![][modelscope-shield]][modelscope-link]、[![][compshare-shield]][compshare-link]
 
-## 五、快速上手
 
-### 5.1 依赖
+- 2024.11.20: Gradio Demo增加**打印排版**选项卡，支持六寸、五寸、A4、3R、4R五种排版尺寸
+- 2024.11.16: API接口增加美颜参数
+- 2024.09.25: 增加**五寸相纸**和**JPEG下载**选项｜默认照片下载支持300DPI
+- 2024.09.24: API接口增加base64图像传入选项 | Gradio Demo增加**排版照裁剪线**功能
+- 2024.09.22: Gradio Demo增加**野兽模式**，可设置内存加载策略 | API接口增加**dpi、face_alignment**参数
+- 2024.09.18: Gradio Demo增加**分享模版照**功能、增加**美式证件照**背景选项
+- 2024.09.17: Gradio Demo增加**自定义底色-HEX输入**功能 | **（社区贡献）C++版本** - [HivisionIDPhotos-cpp](https://github.com/zjkhahah/HivisionIDPhotos-cpp) 贡献 by [zjkhahah](https://github.com/zjkhahah)
+- 2024.09.16: Gradio Demo增加**人脸旋转对齐**功能，自定义尺寸输入支持**毫米**单位
 
-平台
-- Ubuntu 18.04 x86_64 NVIDIA rtx/tesla GPUs
-- Ubuntu 18.04 aarch64 NVIDIA jetson serials device，tx2 tested
-- Ubuntu 18.04 x86_64 Cambrian MLU serials device, MLU 370 tested (code not provided)
-- Wait for your test
+<br>
 
-基础
-- C++ 17
-- OpenCV >= 4.6
-- GStreamer 1.20 (Required by OpenCV)
-- GCC >= 7.5
+# 项目简介
 
-可选，如果你需要实现自己的推理后端，或者使用除 `opencv::dnn` 之外的其他推理后端.
-- CUDA
-- TensorRT
-- Paddle Inference
-- ONNX Runtime
-- Anything you like
+> 🚀 谢谢你对我们的工作感兴趣。您可能还想查看我们在图像领域的其他成果，欢迎来信:zeyi.lin@swanhub.co.
 
-[如何安装CUDA和TensorRT](./third_party/trt_vehicle/README.md)
+HivisionIDPhoto 旨在开发一种实用、系统性的证件照智能制作算法。
 
-[如何安装Paddle_Inference](./third_party/paddle_ocr/README.md)
+它利用一套完善的AI模型工作流程，实现对多种用户拍照场景的识别、抠图与证件照生成。
 
-### 5.2 编译和调试
+**HivisionIDPhoto 可以做到：**
 
-1. 运行 `git clone https://github.com/sherlockchou86/video_pipe_c.git`
-2. 运行 `cd video_pipe_c`
-3. 运行 `mkdir build && cd build`
-4. 运行 `cmake ..`
-5. 运行 `make -j8`
+1. 轻量级抠图（纯离线，仅需 **CPU** 即可快速推理）
+2. 根据不同尺寸规格生成不同的标准证件照、六寸排版照
+3. 支持 纯离线 或 端云 推理
+4. 美颜
+5. 智能换正装（waiting）
 
-编译完成后，所有的库文件存放在 `build/libs` 中，所有的 Sample 运行文件存放在 `build/bin` 中。在执行第 4 步的时候，可以添加一些编译选项：
-- -DVP_WITH_CUDA=ON （编译 CUDA 相关功能，默认为 OFF）
-- -DVP_WITH_TRT=ON （编译 TensorRT 相关功能和 Samples，默认为 OFF）
-- -DVP_WITH_PADDLE=ON （编译 PaddlePaddle 相关功能和 Samples，默认为 OFF）
-- -DVP_BUILD_COMPLEX_SAMPLES=ON （编译高级 Samples，默认为 OFF）
+<div align="center">
+<img src="assets/demo.png" width=900>
+</div>
 
-比如需要开启CUDA和TensorRT相关的模块，可以运行 `cmake -DVP_WITH_CUDA=ON -DVP_WITH_TRT=ON ..`。如果只运行 `cmake ..`，那么所有代码运行在 CPU 上。
+---
+
+如果 HivisionIDPhoto 对你有帮助，请 star 这个 repo 或推荐给你的朋友，解决证件照应急制作问题！
+
+<br>
+
+# 🏠 社区
+
+我们分享了一些由社区构建的HivisionIDPhotos的有趣应用和扩展：
+
+| [HivisionIDPhotos-ComfyUI][community-hivision-comfyui] | [HivisionIDPhotos-wechat-weapp][community-hivision-wechat] |
+| :----------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------: |
+| <a href="https://github.com/AIFSH/HivisionIDPhotos-ComfyUI"> <img src="assets/comfyui.png" width="900" alt="ComfyUI workflow"> </a>  | <a href="https://github.com/no1xuan/HivisionIDPhotos-wechat-weapp"> <img src="assets/community-wechat-miniprogram.png" width="900" alt="ComfyUI workflow"> </a>  |
+|ComfyUI证件照处理工作流 | 证件照微信小程序（JAVA后端+原生前端） |
+
+| [HivisionIDPhotos-Uniapp][community-hivision-uniapp] | [HivisionIDPhotos-web](https://github.com/jkm199/HivisionIDPhotos-web)|
+| :------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------: |
+| <a href="https://github.com/soulerror/HivisionIDPhotos-Uniapp"> <img src="assets/community-uniapp-wechat-miniprogram.png" width="900" alt="HivisionIDPhotos-uniapp"> </a>  | <a href="https://github.com/jkm199/HivisionIDPhotos-web"> <img src="assets/community-web.png" width="900" alt="HivisionIDPhotos-uniapp"> </a>  |
+| 证件照微信小程序（uniapp）| 证件照应用网页版 |
+
+
+- [HivisionIDPhotos-cpp](https://github.com/zjkhahah/HivisionIDPhotos-cpp): HivisionIDphotos C++版本，由 [zjkhahah](https://github.com/zjkhahah) 构建
+- [ai-idphoto](https://github.com/wmlcjj/ai-idphoto): [HivisionIDPhotos-wechat-weapp](https://github.com/no1xuan/HivisionIDPhotos-wechat-weapp) 的uniapp多端兼容版，由 [wmlcjj](https://github.com/wmlcjj) 贡献
+- [HivisionIDPhotos-uniapp-WeChat-gpto1](https://github.com/jkm199/HivisionIDPhotos-uniapp-WeChat-gpto1/): 由gpt-o1辅助完成开发的证件照微信小程序，由 [jkm199](https://github.com/jkm199) 贡献
+- [HivisionIDPhotos-windows-GUI](https://github.com/zhaoyun0071/HivisionIDPhotos-windows-GUI)：Windows客户端应用，由 [zhaoyun0071](https://github.com/zhaoyun0071) 构建
+- [HivisionIDPhotos-NAS](https://github.com/ONG-Leo/HivisionIDPhotos-NAS): 群晖NAS部署中文教程，由 [ONG-Leo](https://github.com/ONG-Leo) 贡献
+
+
+<br>
+
+# 🔧 准备工作
+
+环境安装与依赖：
+- Python >= 3.7（项目主要测试在 python 3.10）
+- OS: Linux, Windows, MacOS
+
+## 1. 克隆项目
+
+```bash
+git clone https://github.com/Zeyi-Lin/HivisionIDPhotos.git
+cd  HivisionIDPhotos
+```
+
+## 2. 安装依赖环境
+
+> 建议 conda 创建一个 python3.10 虚拟环境后，执行以下命令
+
+```bash
+pip install -r requirements.txt
+pip install -r requirements-app.txt
+```
+
+## 3. 下载人像抠图模型权重文件
+
+**方式一：脚本下载**
+
+```bash
+python scripts/download_model.py --models all
+# 如需指定下载某个模型
+# python scripts/download_model.py --models modnet_photographic_portrait_matting
+```
+
+**方式二：直接下载**
+
+模型均存到项目的`hivision/creator/weights`目录下：
+
+| 人像抠图模型 | 介绍 | 下载 |
+| -- | -- | -- |
+| MODNet | [MODNet](https://github.com/ZHKKKe/MODNet)官方权重 | [下载](https://github.com/Zeyi-Lin/HivisionIDPhotos/releases/download/pretrained-model/modnet_photographic_portrait_matting.onnx)(24.7MB)|
+| hivision_modnet | 对纯色换底适配性更好的抠图模型 | [下载](https://github.com/Zeyi-Lin/HivisionIDPhotos/releases/download/pretrained-model/hivision_modnet.onnx)(24.7MB) |
+| rmbg-1.4 | [BRIA AI](https://huggingface.co/briaai/RMBG-1.4) 开源的抠图模型 | [下载](https://huggingface.co/briaai/RMBG-1.4/resolve/main/onnx/model.onnx?download=true)(176.2MB)后重命名为`rmbg-1.4.onnx` |
+| birefnet-v1-lite | [ZhengPeng7](https://github.com/ZhengPeng7/BiRefNet) 开源的抠图模型，拥有最好的分割精度 | [下载](https://github.com/ZhengPeng7/BiRefNet/releases/download/v1/BiRefNet-general-bb_swin_v1_tiny-epoch_232.onnx)(224MB)后重命名为`birefnet-v1-lite.onnx` |
+
+> 如果下载网速不顺利：前往[SwanHub](https://swanhub.co/ZeYiLin/HivisionIDPhotos_models/tree/main)下载。
+
+
+## 4. 人脸检测模型配置（可选）
+
+| 拓展人脸检测模型 | 介绍 | 使用文档 |
+| -- | -- | -- |
+| MTCNN | **离线**人脸检测模型，高性能CPU推理（毫秒级），为默认模型，检测精度较低 | Clone此项目后直接使用 |
+| RetinaFace | **离线**人脸检测模型，CPU推理速度中等（秒级），精度较高| [下载](https://github.com/Zeyi-Lin/HivisionIDPhotos/releases/download/pretrained-model/retinaface-resnet50.onnx)后放到`hivision/creator/retinaface/weights`目录下 |
+| Face++ | 旷视推出的在线人脸检测API，检测精度较高，[官方文档](https://console.faceplusplus.com.cn/documents/4888373) | [使用文档](docs/face++_CN.md)|
+
+## 5. 性能参考
+
+> 测试环境为Mac M1 Max 64GB，非GPU加速，测试图片分辨率为 512x715(1) 与 764×1146(2)。
+
+| 模型组合 | 内存占用 | 推理时长(1) | 推理时长(2) |
+| -- | -- | -- | -- |
+| MODNet + mtcnn | 410MB | 0.207s | 0.246s |
+| MODNet + retinaface | 405MB | 0.571s | 0.971s |
+| birefnet-v1-lite + retinaface | 6.20GB | 7.063s | 7.128s |
+
+## 6. GPU推理加速（可选）
+
+在当前版本，可被英伟达GPU加速的模型为`birefnet-v1-lite`，并请确保你有16GB左右的显存。
+
+如需使用英伟达GPU加速推理，在确保你已经安装[CUDA](https://developer.nvidia.com/cuda-downloads)与[cuDNN](https://developer.nvidia.com/cudnn)后，根据[onnxruntime-gpu文档](https://onnxruntime.ai/docs/execution-providers/CUDA-ExecutionProvider.html#cuda-12x)找到对应的`onnxruntime-gpu`版本安装，以及根据[pytorch官网](https://pytorch.org/get-started/locally/)找到对应的`torch`版本安装。
+
+```bash
+# 假如你的电脑安装的是CUDA 12.x, cuDNN 8
+# 安装torch是可选的，如果你始终配置不好cuDNN，那么试试安装torch
+pip install onnxruntime-gpu==1.18.0
+pip install torch --index-url https://download.pytorch.org/whl/cu121
+```
+
+完成安装后，调用`birefnet-v1-lite`模型即可利用GPU加速推理。
+
+> TIPS: CUDA 支持向下兼容。比如你的 CUDA 版本为 12.6，`torch` 官方目前支持的最高版本为 12.4（<12.6），`torch`仍可以正常使用CUDA。
+
+<br>
+
+# ⚡️ 运行 Gradio Demo
+
+```bash
+python app.py
+```
+
+运行程序将生成一个本地 Web 页面，在页面中可完成证件照的操作与交互。
+
+<img src="assets/harry.png" width=900>
+
+<br>
+
+# 🚀 Python 推理
+
+核心参数：
+
+- `-i`: 输入图像路径
+- `-o`: 保存图像路径
+- `-t`: 推理类型，有idphoto、human_matting、add_background、generate_layout_photos可选
+- `--matting_model`: 人像抠图模型权重选择
+- `--face_detect_model`: 人脸检测模型选择
+
+更多参数可通过`python inference.py --help`查看
+
+## 1. 证件照制作
+
+输入 1 张照片，获得 1 张标准证件照和 1 张高清证件照的 4 通道透明 png
+
+```python
+python inference.py -i demo/images/test0.jpg -o ./idphoto.png --height 413 --width 295
+```
+
+## 2. 人像抠图
+
+输入 1 张照片，获得 1张 4 通道透明 png
+
+```python
+python inference.py -t human_matting -i demo/images/test0.jpg -o ./idphoto_matting.png --matting_model hivision_modnet
+```
+
+## 3. 透明图增加底色
+
+输入 1 张 4 通道透明 png，获得 1 张增加了底色的 3通道图像
+
+```python
+python inference.py -t add_background -i ./idphoto.png -o ./idphoto_ab.jpg  -c 4f83ce -k 30 -r 1
+```
+
+## 4. 得到六寸排版照
+
+输入 1 张 3 通道照片，获得 1 张六寸排版照
+
+```python
+python inference.py -t generate_layout_photos -i ./idphoto_ab.jpg -o ./idphoto_layout.jpg  --height 413 --width 295 -k 200
+```
+
+## 5. 证件照裁剪
+
+输入 1 张 4 通道照片（抠图好的图像），获得 1 张标准证件照和 1 张高清证件照的 4 通道透明 png
+
+```python
+python inference.py -t idphoto_crop -i ./idphoto_matting.png -o ./idphoto_crop.png --height 413 --width 295
+```
+
+
+<br>
+
+# ⚡️ 部署 API 服务
+
+## 启动后端
 
 ```
-# 开启全部
-cmake -DVP_WITH_CUDA=ON -DVP_WITH_TRT=ON -DVP_WITH_PADDLE=ON -DVP_BUILD_COMPLEX_SAMPLES=ON ..
-# 关闭全部（默认）
-cmake ..
+python deploy_api.py
 ```
 
-如果要运行编译生成的 Samples，先下载模型文件和测试数据：
+## 请求 API 服务
 
-1. [谷歌网盘下载测试文件和模型](https://drive.google.com/drive/folders/1v9dVcR6xttUTB-WPsH3mZ_ZZMzD4wG-v?usp=sharing)
-2. [百度网盘下载测试文件和模型](https://pan.baidu.com/s/1jr2nBnEDmuNaM5DiMjbC0g?pwd=nf53)
+详细请求方式请参考 [API 文档](docs/api_CN.md)，包含以下请求示例：
+- [cURL](docs/api_CN.md#curl-请求示例)
+- [Python](docs/api_CN.md#python-请求示例)
 
-将下载好的目录（名称为 vp_data）放在任何位置（比如放在 `/root/abc` 下面），然后在 `同一目录` 下运行 Sample，比如在 `/root/abc` 下面执行命名：`[path to video_pipe_c]/build/bin/1-1-1_sample` 即可运行 1-1-1_sample。
+<br>
 
-**注意**：`./third_party/` 下面都是独立的项目，有的是 header-only 库，被 VideoPipe 直接引用；有的包含有 cpp 文件，可以独立编译或运行，VideoPipe 依赖这些库，在编译 VideoPipe 的过程中会自动编译这些库。这些库也包含自己的 Samples，具体使用方法可参见对应子目录下的 README 文件.
+# 🐳 Docker 部署
 
-### 5.3 如何使用
+## 1. 拉取或构建镜像
 
-1. 先将 VideoPipe 编译成库，然后引用它.
-2. 或者直接引用源代码，然后编译整个 application.
+> 以下方式三选一
 
-下面是一个如何构建 Pipeline 然后运行的 Sample(请先修改代码中的相关文件路径)：
+**方式一：拉取最新镜像：**
 
-```c++
-#include "../nodes/vp_file_src_node.h"
-#include "../nodes/infers/vp_yunet_face_detector_node.h"
-#include "../nodes/infers/vp_sface_feature_encoder_node.h"
-#include "../nodes/osd/vp_face_osd_node_v2.h"
-#include "../nodes/vp_screen_des_node.h"
-#include "../nodes/vp_rtmp_des_node.h"
-#include "../utils/analysis_board/vp_analysis_board.h"
+```bash
+docker pull linzeyi/hivision_idphotos
+```
 
-/*
-* 名称：1-1-N sample
-* 完整代码位于：samples/1-1-N_sample.cpp
-* 功能说明：1个视频输入，1个视频分析任务（人脸检测和识别），2个输出（屏幕输出/RTMP推流输出）
-*/
+**方式二：Dockrfile 直接构建镜像：**
 
-int main() {
-    VP_SET_LOG_INCLUDE_CODE_LOCATION(false);
-    VP_SET_LOG_INCLUDE_THREAD_ID(false);
-    VP_LOGGER_INIT();
+在确保将至少一个[抠图模型权重文件](#3-下载权重文件)放到`hivision/creator/weights`下后，在项目根目录执行：
 
-    // 1、创建节点
-    // 视频获取 Node
-    auto file_src_0 = std::make_shared<vp_nodes::vp_file_src_node>("file_src_0", 0, "./test_video/10.mp4", 0.6);
-    // 2、模型推理 Node
-    // 一级推理：人脸检测
-    auto yunet_face_detector_0 = std::make_shared<vp_nodes::vp_yunet_face_detector_node>("yunet_face_detector_0", "./models/face/face_detection_yunet_2022mar.onnx");
-    // 二级推理：人脸识别
-    auto sface_face_encoder_0 = std::make_shared<vp_nodes::vp_sface_feature_encoder_node>("sface_face_encoder_0", "./models/face/face_recognition_sface_2021dec.onnx");
-    // 3、OSD Node
-    // 处理结果绘制到帧上
-    auto osd_0 = std::make_shared<vp_nodes::vp_face_osd_node_v2>("osd_0");
-    // 屏幕展示
-    auto screen_des_0 = std::make_shared<vp_nodes::vp_screen_des_node>("screen_des_0", 0);
-    // 推流展示
-    auto rtmp_des_0 = std::make_shared<vp_nodes::vp_rtmp_des_node>("rtmp_des_0", 0, "rtmp://192.168.77.60/live/10000");
+```bash
+docker build -t linzeyi/hivision_idphotos .
+```
 
-    // 构建管道，将节点的处理结果关联起来
-    yunet_face_detector_0->attach_to({file_src_0});
-    sface_face_encoder_0->attach_to({yunet_face_detector_0});
-    osd_0->attach_to({sface_face_encoder_0});
+**方式三：Docker compose 构建：**
 
-    // 管道自动拆分，通过屏幕/推流输出结果
-    screen_des_0->attach_to({osd_0});
-    rtmp_des_0->attach_to({osd_0});
+在确保将至少一个[抠图模型权重文件](#3-下载权重文件)放到`hivision/creator/weights`下后，在项目根目录下执行：
 
-    // 启动管道
-    file_src_0->start();
+```bash
+docker compose build
+```
 
-    // 可视化管道
-    vp_utils::vp_analysis_board board({file_src_0});
-    board.display();
+## 2. 运行服务
+
+**启动 Gradio Demo 服务**
+
+运行下面的命令，在你的本地访问 [http://127.0.0.1:7860](http://127.0.0.1:7860/) 即可使用。
+
+```bash
+docker run -d -p 7860:7860 linzeyi/hivision_idphotos
+```
+
+**启动 API 后端服务**
+
+```bash
+docker run -d -p 8080:8080 linzeyi/hivision_idphotos python3 deploy_api.py
+```
+
+**两个服务同时启动**
+
+```bash
+docker compose up -d
+```
+
+## 环境变量
+
+本项目提供了一些额外的配置项，使用环境变量进行设置：
+
+| 环境变量 | 类型	| 描述 | 示例 |
+|--|--|--|--|
+| FACE_PLUS_API_KEY	 | 可选	| 这是你在 Face++ 控制台申请的 API 密钥	 | `7-fZStDJ····` |
+| FACE_PLUS_API_SECRET	 | 可选	| Face++ API密钥对应的Secret | `VTee824E····` |
+| RUN_MODE | 可选 | 运行模式，可选值为`beast`(野兽模式)。野兽模式下人脸检测和抠图模型将不释放内存，从而获得更快的二次推理速度。建议内存16GB以上尝试。 | `beast` |
+| DEFAULT_LANG | 可选 | Gradio Demo启动时的默认语言| `en` |
+
+docker使用环境变量示例：
+```bash
+docker run  -d -p 7860:7860 \
+    -e FACE_PLUS_API_KEY=7-fZStDJ···· \
+    -e FACE_PLUS_API_SECRET=VTee824E···· \
+    -e RUN_MODE=beast \
+    -e DEFAULT_LANG=en \
+    linzeyi/hivision_idphotos  
+```
+
+<br>
+
+# FAQ
+
+## 1. 如何修改预设尺寸和颜色？
+
+- 尺寸：修改[size_list_CN.csv](demo/assets/size_list_CN.csv)后再次运行 `app.py` 即可，其中第一列为尺寸名，第二列为高度，第三列为宽度。
+- 颜色：修改[color_list_CN.csv](demo/assets/color_list_CN.csv)后再次运行 `app.py` 即可，其中第一列为颜色名，第二列为Hex值。
+
+## 2. 如何修改水印字体？
+
+1. 将字体文件放到`hivision/plugin/font`文件夹下
+2. 修改`hivision/plugin/watermark.py`的`font_file`参数值为字体文件名
+
+## 3. 如何添加社交媒体模板照？
+
+1. 将模板图片放到`hivision/plugin/template/assets`文件夹下。模板图片是一个4通道的透明png。
+2. 在`hivision/plugin/template/assets/template_config.json`文件中添加最新的模板信息，其中`width`为模板图宽度(px)，`height`为模板图高度(px)，`anchor_points`为模板中透明区域的四个角的坐标(px)；`rotation`为透明区域相对于垂直方向的旋转角度，>0为逆时针，<0为顺时针。
+3. 在`demo/processor.py`的`_generate_image_template`函数中的`TEMPLATE_NAME_LIST`变量添加最新的模板名
+
+<img src="assets/social_template.png" width="500">
+
+## 4. 如何修改Gradio Demo的顶部导航栏？
+
+- 修改`demo/assets/title.md`
+
+## 5. 如何添加/修改「打印排版」中的尺寸？
+
+- 修改`demo/locales.py`中的`print_switch`字典，添加/修改新的尺寸名称和尺寸参数，然后重新运行`python app.py`
+
+<br>
+
+# 📧 联系我们
+
+如果您有任何问题，请发邮件至 zeyi.lin@swanhub.co
+
+<br>
+
+# 🙏 感谢支持
+
+[![Stargazers repo roster for @Zeyi-Lin/HivisionIDPhotos](https://reporoster.com/stars/Zeyi-Lin/HivisionIDPhotos)](https://github.com/Zeyi-Lin/HivisionIDPhotos/stargazers)
+
+[![Forkers repo roster for @Zeyi-Lin/HivisionIDPhotos](https://reporoster.com/forks/Zeyi-Lin/HivisionIDPhotos)](https://github.com/Zeyi-Lin/HivisionIDPhotos/network/members)
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Zeyi-Lin/HivisionIDPhotos&type=Date)](https://star-history.com/#Zeyi-Lin/HivisionIDPhotos&Date)
+
+贡献者们：
+
+<a href="https://github.com/Zeyi-Lin/HivisionIDPhotos/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Zeyi-Lin/HivisionIDPhotos" />
+</a>
+
+[Zeyi-Lin](https://github.com/Zeyi-Lin)、[SAKURA-CAT](https://github.com/SAKURA-CAT)、[Feudalman](https://github.com/Feudalman)、[swpfY](https://github.com/swpfY)、[Kaikaikaifang](https://github.com/Kaikaikaifang)、[ShaohonChen](https://github.com/ShaohonChen)、[KashiwaByte](https://github.com/KashiwaByte)
+
+<br>
+
+# 📜 Lincese
+
+This repository is licensed under the [Apache-2.0 License](LICENSE).
+
+<br>
+
+# 📚 引用
+
+如果您在研究或项目中使用了HivisionIDPhotos，请考虑引用我们的工作。您可以使用以下BibTeX条目：
+
+```bibtex
+@misc{hivisionidphotos,
+      title={{HivisionIDPhotos: A Lightweight and Efficient AI ID Photos Tool}},
+      author={Zeyi Lin and SwanLab Team},
+      year={2024},
+      publisher={GitHub},
+      url = {\url{https://github.com/Zeyi-Lin/HivisionIDPhotos}},
 }
 ```
-上面代码运行后，会出现 3 个画面:
-1. 管道的运行状态图，状态自动刷新
-2. 屏幕显示结果（GUI）
-3. 播放器显示结果（RTMP）
-
-![](./doc/g3.png)
 
 
-## 5.4 案例原型
-|id|sample|screenshot|
-|--|--|--|
-|1|1-1-1_sample|![](./doc//p10.png)|
-|2|1-1-N_sample|![](./doc//p11.png)|
-|3|1-N-N_sample|![](./doc//p12.png)|
-|4|N-1-N_sample|![](./doc//p13.png)|
-|5|N-N_sample|![](./doc//p14.png)|
-|6|paddle_infer_sample|![](./doc//p15.png)|
-|7|src_des_sample|![](./doc//p16.png)|
-|8|trt_infer_sample|![](./doc//p17.png)|
-|9|vp_logger_sample|-|
-|10|face_tracking_sample|![](./doc//p18.png)|
-|11|vehicle_tracking_sample|![](./doc//p22.png)|
-|12|interaction with pipe sample|--|
-|13|record_sample|--|
-|14|message_broker_sample & message_broker_sample2|![](./doc//p21.png)|
-|15|mask_rcnn_sample|![](./doc//p30.png)|
-|16|openpose_sample|![](./doc//p31.png)|
-|17|enet_seg_sample|![](./doc//p32.png)|
-|18|multi detectors and classifiers sample|![](./doc//p33.png)|
-|19|image_des_sample|![](./doc//p34.png)|
-|20|image_src_sample|![](./doc//p35.png)|
-|21|rtsp_des_sample|![](./doc//p36.png)|
-|22|ba_crossline_sample|![](./doc//p37.png)|
-|23|plate_recognize_sample|![](./doc//p38.png)|
-|24|vehicle body scan sample|![](./doc/p40.png)|
-|25|body scan and plate detect sample|![](./doc/p39.png)|
-|26|app_src_sample|![](./doc/p41.png)|
-|27|vehicle cluster based on classify encoding sample|![](./doc/p42.png)|
-|28|ba_stop_sample|![](./doc/p49.png)|
-|29|behaviour analysis|![](./doc/p48.png)|
-|30|similiarity search|![](./doc/p44.png)![](./doc/p43.png)![](./doc/p45.png)|
-|31|property and similiarity search|![](./doc/p46.png)![](./doc/p47.png)|
-|32|ba_jam_sample|![](./doc/p50.png)|
-|33|face recognize|![](./doc/p51.png)|
-|34|license plate recognize(LPR) camera|![](./doc/p52.png)|
-|35|math expression check|![](./doc/p53.png)|
-|36|skip_sample|![](./doc/p54.png)|
-|37|obstacle_detect_sample|![](./doc/p55.png)|
-|38|firesmoke_detect_sample|![](./doc/p56.png)|
-|39|face_swap_sample|![](./doc/p57.png)|
-|40|video_restoration_sample|![](./doc/p58.png)|
-|41|app_des_sample|![](./doc/p59.png)|
-|42|app_src_des_sample|![](./doc/p60.png)|
-|43|lane_detect_sample|![](./doc/p61.png)|
 
-## 六、更多资料
-- [sample code](./sample/README.md)
-- [node table](./nodes/README.md)
-- [how VideoPipe works](./doc/about.md)
-- [how record works](./nodes/record/README.md)
-- [environment for reference](./doc/env.md)
-- :blush: wait for update...
 
-## 扫码入群交流
-![](./doc/vx.png)
+[github-stars-shield]: https://img.shields.io/github/stars/zeyi-lin/hivisionidphotos?color=ffcb47&labelColor=black&style=flat-square
+[github-stars-link]: https://github.com/zeyi-lin/hivisionidphotos/stargazers
 
-## 鸣谢
+[swanhub-demo-shield]: https://swanhub.co/git/repo/SwanHub%2FAuto-README/file/preview?ref=main&path=swanhub.svg
+[swanhub-demo-link]: https://swanhub.co/ZeYiLin/HivisionIDPhotos/demo
 
-<a href="https://hellogithub.com/repository/a32a1f2ad04a4b8aa4dd3e1b76c880b2" target="_blank"><img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=a32a1f2ad04a4b8aa4dd3e1b76c880b2" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+[spaces-shield]: https://img.shields.io/badge/🤗-Open%20in%20Spaces-blue
+[spaces-link]: https://huggingface.co/spaces/TheEeeeLin/HivisionIDPhotos
+
+<!-- 微信群链接 -->
+[wechat-shield]: https://img.shields.io/badge/WeChat-微信-4cb55e
+[wechat-link]: https://docs.qq.com/doc/DUkpBdk90eWZFS2JW
+
+<!-- Github Release -->
+[release-shield]: https://img.shields.io/github/v/release/zeyi-lin/hivisionidphotos?color=369eff&labelColor=black&logo=github&style=flat-square
+[release-link]: https://github.com/zeyi-lin/hivisionidphotos/releases
+
+[license-shield]: https://img.shields.io/badge/license-apache%202.0-white?labelColor=black&style=flat-square
+[license-link]: https://github.com/Zeyi-Lin/HivisionIDPhotos/blob/master/LICENSE
+
+[github-issues-shield]: https://img.shields.io/github/issues/zeyi-lin/hivisionidphotos?color=ff80eb&labelColor=black&style=flat-square
+[github-issues-link]: https://github.com/zeyi-lin/hivisionidphotos/issues
+
+[dockerhub-shield]: https://img.shields.io/docker/v/linzeyi/hivision_idphotos?color=369eff&label=docker&labelColor=black&logoColor=white&style=flat-square
+[dockerhub-link]: https://hub.docker.com/r/linzeyi/hivision_idphotos/tags
+
+[trendshift-shield]: https://trendshift.io/api/badge/repositories/11622
+[trendshift-link]: https://trendshift.io/repositories/11622
+
+[hellogithub-shield]: https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=8ea1457289fb4062ba661e5299e733d6&claim_uid=Oh5UaGjfrblg0yZ
+[hellogithub-link]: https://hellogithub.com/repository/8ea1457289fb4062ba661e5299e733d6
+
+[github-contributors-shield]: https://img.shields.io/github/contributors/zeyi-lin/hivisionidphotos?color=c4f042&labelColor=black&style=flat-square
+[github-contributors-link]: https://github.com/zeyi-lin/hivisionidphotos/graphs/contributors
+
+[github-forks-shield]: https://img.shields.io/github/forks/zeyi-lin/hivisionidphotos?color=8ae8ff&labelColor=black&style=flat-square
+[github-forks-link]: https://github.com/zeyi-lin/hivisionidphotos/network/members
+
+[modelscope-shield]: https://img.shields.io/badge/Demo_on_ModelScope-purple?logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIzIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCiA8Zz4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBhdGggaWQ9InN2Z18xNCIgZmlsbD0iIzYyNGFmZiIgZD0ibTAsODkuODRsMjUuNjUsMGwwLDI1LjY0OTk5bC0yNS42NSwwbDAsLTI1LjY0OTk5eiIvPgogIDxwYXRoIGlkPSJzdmdfMTUiIGZpbGw9IiM2MjRhZmYiIGQ9Im05OS4xNCwxMTUuNDlsMjUuNjUsMGwwLDI1LjY1bC0yNS42NSwwbDAsLTI1LjY1eiIvPgogIDxwYXRoIGlkPSJzdmdfMTYiIGZpbGw9IiM2MjRhZmYiIGQ9Im0xNzYuMDksMTQxLjE0bC0yNS42NDk5OSwwbDAsMjIuMTlsNDcuODQsMGwwLC00Ny44NGwtMjIuMTksMGwwLDI1LjY1eiIvPgogIDxwYXRoIGlkPSJzdmdfMTciIGZpbGw9IiMzNmNmZDEiIGQ9Im0xMjQuNzksODkuODRsMjUuNjUsMGwwLDI1LjY0OTk5bC0yNS42NSwwbDAsLTI1LjY0OTk5eiIvPgogIDxwYXRoIGlkPSJzdmdfMTgiIGZpbGw9IiMzNmNmZDEiIGQ9Im0wLDY0LjE5bDI1LjY1LDBsMCwyNS42NWwtMjUuNjUsMGwwLC0yNS42NXoiLz4KICA8cGF0aCBpZD0ic3ZnXzE5IiBmaWxsPSIjNjI0YWZmIiBkPSJtMTk4LjI4LDg5Ljg0bDI1LjY0OTk5LDBsMCwyNS42NDk5OWwtMjUuNjQ5OTksMGwwLC0yNS42NDk5OXoiLz4KICA8cGF0aCBpZD0ic3ZnXzIwIiBmaWxsPSIjMzZjZmQxIiBkPSJtMTk4LjI4LDY0LjE5bDI1LjY0OTk5LDBsMCwyNS42NWwtMjUuNjQ5OTksMGwwLC0yNS42NXoiLz4KICA8cGF0aCBpZD0ic3ZnXzIxIiBmaWxsPSIjNjI0YWZmIiBkPSJtMTUwLjQ0LDQybDAsMjIuMTlsMjUuNjQ5OTksMGwwLDI1LjY1bDIyLjE5LDBsMCwtNDcuODRsLTQ3Ljg0LDB6Ii8+CiAgPHBhdGggaWQ9InN2Z18yMiIgZmlsbD0iIzM2Y2ZkMSIgZD0ibTczLjQ5LDg5Ljg0bDI1LjY1LDBsMCwyNS42NDk5OWwtMjUuNjUsMGwwLC0yNS42NDk5OXoiLz4KICA8cGF0aCBpZD0ic3ZnXzIzIiBmaWxsPSIjNjI0YWZmIiBkPSJtNDcuODQsNjQuMTlsMjUuNjUsMGwwLC0yMi4xOWwtNDcuODQsMGwwLDQ3Ljg0bDIyLjE5LDBsMCwtMjUuNjV6Ii8+CiAgPHBhdGggaWQ9InN2Z18yNCIgZmlsbD0iIzYyNGFmZiIgZD0ibTQ3Ljg0LDExNS40OWwtMjIuMTksMGwwLDQ3Ljg0bDQ3Ljg0LDBsMCwtMjIuMTlsLTI1LjY1LDBsMCwtMjUuNjV6Ii8+CiA8L2c+Cjwvc3ZnPg==&labelColor=white
+[modelscope-link]: https://modelscope.cn/studios/SwanLab/HivisionIDPhotos
+
+[modelers-shield]: https://img.shields.io/badge/Demo_on_Modelers-c42a2a?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCAxMjQgNjQiIGZpbGw9Im5vbmUiPgo8cGF0aCBkPSJNNDIuNzc4MyAwSDI2LjU5NzdWMTUuNzc4N0g0Mi43NzgzVjBaIiBmaWxsPSIjREUwNDI5Ii8+CjxwYXRoIGQ9Ik0xNi41MDg4IDQuMTc5MkgwLjMyODEyNVYxOS45NTc5SDE2LjUwODhWNC4xNzkyWiIgZmlsbD0iIzI0NDk5QyIvPgo8cGF0aCBkPSJNMTIzLjk1MiA0LjE3OTJIMTA3Ljc3MVYxOS45NTc5SDEyMy45NTJWNC4xNzkyWiIgZmlsbD0iIzI0NDk5QyIvPgo8cGF0aCBkPSJNMTYuNTA4OCA0NS40NjE5SDAuMzI4MTI1VjYxLjI0MDZIMTYuNTA4OFY0NS40NjE5WiIgZmlsbD0iIzI0NDk5QyIvPgo8cGF0aCBkPSJNMTIzLjk1MiA0NS40NjE5SDEwNy43NzFWNjEuMjQwNkgxMjMuOTUyVjQ1LjQ2MTlaIiBmaWxsPSIjMjQ0OTlDIi8+CjxwYXRoIGQ9Ik0zMi43MDggMTUuNzc4OEgxNi41MjczVjMxLjU1NzVIMzIuNzA4VjE1Ljc3ODhaIiBmaWxsPSIjREUwNDI5Ii8+CjxwYXRoIGQ9Ik01Mi44NDg2IDE1Ljc3ODhIMzYuNjY4VjMxLjU1NzVINTIuODQ4NlYxNS43Nzg4WiIgZmlsbD0iI0RFMDQyOSIvPgo8cGF0aCBkPSJNOTcuNzIzNyAwSDgxLjU0M1YxNS43Nzg3SDk3LjcyMzdWMFoiIGZpbGw9IiNERTA0MjkiLz4KPHBhdGggZD0iTTg3LjY1MzQgMTUuNzc4OEg3MS40NzI3VjMxLjU1NzVIODcuNjUzNFYxNS43Nzg4WiIgZmlsbD0iI0RFMDQyOSIvPgo8cGF0aCBkPSJNMTA3Ljc5NCAxNS43Nzg4SDkxLjYxMzNWMzEuNTU3NUgxMDcuNzk0VjE1Ljc3ODhaIiBmaWxsPSIjREUwNDI5Ii8+CjxwYXRoIGQ9Ik0yNC42NzQ4IDMxLjU1NzZIOC40OTQxNFY0Ny4zMzYzSDI0LjY3NDhWMzEuNTU3NloiIGZpbGw9IiNERTA0MjkiLz4KPHBhdGggZD0iTTYwLjg3OTkgMzEuNTU3Nkg0NC42OTkyVjQ3LjMzNjNINjAuODc5OVYzMS41NTc2WiIgZmlsbD0iI0RFMDQyOSIvPgo8cGF0aCBkPSJNNzkuNjIwMSAzMS41NTc2SDYzLjQzOTVWNDcuMzM2M0g3OS42MjAxVjMxLjU1NzZaIiBmaWxsPSIjREUwNDI5Ii8+CjxwYXRoIGQ9Ik0xMTUuODI1IDMxLjU1NzZIOTkuNjQ0NVY0Ny4zMzYzSDExNS44MjVWMzEuNTU3NloiIGZpbGw9IiNERTA0MjkiLz4KPHBhdGggZD0iTTcwLjI1NDkgNDcuMzM1OUg1NC4wNzQyVjYzLjExNDdINzAuMjU0OVY0Ny4zMzU5WiIgZmlsbD0iI0RFMDQyOSIvPgo8L3N2Zz4=&labelColor=white
+[modelers-link]: https://modelers.cn/spaces/SwanLab/HivisionIDPhotos
+
+[compshare-shield]: https://img.shields.io/badge/Demo_on_Compshare-4838F4?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDUwIDUwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImEiIHgxPSIxNDkuNzk5JSIgeDI9Ii0zMS43NjMlIiB5MT0iODEuMDclIiB5Mj0iMjQuNTQ1JSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMUZGRiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI0YwRjVGQSIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJiIiB4MT0iNjcuOTY3JSIgeDI9IjEyLjM0NSUiIHkxPSIxMTIuMjE1JSIgeTI9IjI3LjM2NCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMyMjFGRkYiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNGMEY1RkEiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iYyIgeDE9IjEyOS4xNTklIiB4Mj0iLTI2Ljc3NyUiIHkxPSI0Ny4zNTYlIiB5Mj0iNTIuNTUxJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMUZGRiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI0YwRjVGQSIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJkIiB4MT0iNzYuMTkyJSIgeDI9IjM3LjI3OSUiIHkxPSIxNjAuNzQ0JSIgeTI9Ii0zLjc2NyUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMyMjFGRkYiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNGMEY1RkEiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iZSIgeDE9IjM4Ljk1NyUiIHgyPSIxMDUuNTA5JSIgeTE9IjI0LjIzMyUiIHkyPSIxNzkuMjA5JSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMUZGRiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI0YwRjVGQSIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJmIiB4MT0iMzkuMjk0JSIgeDI9IjkxLjIzNSUiIHkxPSItMi44NTYlIiB5Mj0iMjE1LjE0NSUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMyMjFGRkYiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNGMEY1RkEiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjEwMi40NiUiIHgyPSIzMC40MjUlIiB5MT0iMTYxLjE2MSUiIHkyPSItMjguMTAzJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMUZGRiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI0YwRjVGQSIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJoIiB4MT0iMi4xODglIiB4Mj0iOTYuMjcyJSIgeTE9IjUwJSIgeTI9IjUwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMUZGRiIvPjxzdG9wIG9mZnNldD0iMTglIiBzdG9wLWNvbG9yPSIjMjMyMEZGIiBzdG9wLW9wYWNpdHk9Ii45OSIvPjxzdG9wIG9mZnNldD0iMzElIiBzdG9wLWNvbG9yPSIjMjUyMkZGIiBzdG9wLW9wYWNpdHk9Ii45NSIvPjxzdG9wIG9mZnNldD0iNDMlIiBzdG9wLWNvbG9yPSIjMjgyNUZGIiBzdG9wLW9wYWNpdHk9Ii44OSIvPjxzdG9wIG9mZnNldD0iNTQlIiBzdG9wLWNvbG9yPSIjMkQyQUZGIiBzdG9wLW9wYWNpdHk9Ii44Ii8+PHN0b3Agb2Zmc2V0PSI2NCUiIHN0b3AtY29sb3I9IiMzNDMxRkYiIHN0b3Atb3BhY2l0eT0iLjY5Ii8+PHN0b3Agb2Zmc2V0PSI3NCUiIHN0b3AtY29sb3I9IiMzQjM4RkYiIHN0b3Atb3BhY2l0eT0iLjU1Ii8+PHN0b3Agb2Zmc2V0PSI4MyUiIHN0b3AtY29sb3I9IiM0NTQyRkYiIHN0b3Atb3BhY2l0eT0iLjM4Ii8+PHN0b3Agb2Zmc2V0PSI5MiUiIHN0b3AtY29sb3I9IiM0RjRDRkYiIHN0b3Atb3BhY2l0eT0iLjE5Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNUE1N0ZGIiBzdG9wLW9wYWNpdHk9IjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwb2x5Z29uIGZpbGw9InVybCgjYSkiIGZpbGwtcnVsZT0ibm9uemVybyIgcG9pbnRzPSI0MCAxMS4xMjYgMzEuOTk4IDE1Ljc0NiAzMS45NzMgMTUuNzMzIDIzLjk5NyAxMS4xMjYgMzEuOTczIDYuNTEyIDMxLjk5OCA2LjQ5OSIvPjxwYXRoIGZpbGw9InVybCgjYikiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTM0Ljk5NDE2MTUsMjYuNzM1ODU3NSBMMzQuOTQ5MDYzOCwyNi43MzU4NTc1IEwzMy43ODI5Njc2LDI2LjA5MDU1NzMgQzMyLjY3OTY2OCwyNS40NTI1NDgxIDMxLjk5NzcwNTksMjQuMjc1NjAwOSAzMS45OTE5NDY4LDIyLjk5OTU2OTQgTDMxLjk5MTk0NjgsMTUuNzg1MTEzMyBMMjMuOTk2Nzc4NywxMS4xMjYwNDYgTDIzLjk1MTY4MTEsMTEuMTI2MDQ2IEwyMy45NTE2ODExLDE4LjMzNDA0OTEgQzIzLjk1MzUyMiwxOS42MTA0NDIgMjMuMjc1ODA5NCwyMC43OTA5OTAyIDIyLjE3MzU0NTQsMjEuNDMxNDkgTDE2LjAxNDQ5NTcsMjQuOTkzNTQ3IEwxNi4wMTQ0OTU3LDM0LjI0NzE1MTcgTDIwLjk4MTY3OTEsMzEuMzY5MTEyOCBMMjIuMjI1MDg1NiwzMC42NTI4Mjk2IEMyMy4zMzE3MzQ2LDMwLjAxNDM5OTMgMjQuNjk0MDM1NCwzMC4wMTQzOTkzIDI1LjgwMDY4NDUsMzAuNjUyODI5NiBMMzEuOTcyNjE5MywzNC4yNDcxNTE3IEwzMS45NzI2MTkzLDM0LjI0NzE1MTcgTDM5Ljk2Nzc4NzQsMjkuNjI2ODAyMyBMMzkuOTY3Nzg3NCwyOS42MjY4MDIzIEwzNC45OTQxNjE1LDI2LjczNTg1NzUgWiIvPjxwYXRoIGZpbGw9InVybCgjYykiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTIzLjk1MTczNTIsMTYuOTAxNDgyNyBMMjMuOTUxNzM1MiwxOC4zMzQwNDkxIEMyMy45NTM1MjIsMTkuNjEwNDQyIDIzLjI3NTgwOTQsMjAuNzkwOTkwMiAyMi4xNzM1NDU0LDIxLjQzMTQ5IEwxNi4wMTQ0OTU3LDI0Ljk5MzU0NyBMOCwyMC4zNzk2NTA3IEw4LDIwLjM3OTY1MDcgTDE2LjAwMTYxMDYsMTUuNzY1NzU0MyBMMjAuOTc1MjM2NiwxOC42MzczNDAyIEMyMS41OTE0NDA1LDE4Ljk5MzcxMDIgMjIuMzUwOTc3LDE4Ljk5MjMyNyAyMi45NjU4ODMsMTguNjMzNzE0OCBDMjMuNTgwNzg5LDE4LjI3NTEwMjYgMjMuOTU2OTIzLDE3LjYxNDE2NDggMjMuOTUxNzM1MiwxNi45MDE0ODI3IFoiLz48cG9seWdvbiBmaWxsPSJ1cmwoI2QpIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHBvaW50cz0iMTYuMDAyIDI0Ljk5NCAxNi4wMDIgMzQuMjU0IDggMjkuNjI3IDggMjAuMzgiLz48cG9seWdvbiBmaWxsPSJ1cmwoI2UpIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHBvaW50cz0iNDAgMjkuNjI3IDQwIDM4Ljg4IDQwIDM4Ljg4IDMxLjk5OCA0My41MDEgMzEuOTczIDQzLjQ5NCAzMS45NzMgMzQuMjczIDMxLjk5OCAzNC4yNTQgNDAgMjkuNjI3Ii8+PHBhdGggZmlsbD0idXJsKCNmKSIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNNDAsMTEuMTI2MDQ2IEw0MCwyMC4zNzk2NTA3IEw0MCwyMC4zNzk2NTA3IEwzNC45OTQxNjE1LDIzLjI3NzA0ODUgQzMzLjcwNTY1NzMsMjQuMDM4NTAyNyAzMy43ODI5Njc2LDI2LjAzODkzMzMgMzMuNzgyOTY3NiwyNi4wMzg5MzMzIEMzMi42Nzk2NjgsMjUuNDAwOTI0MSAzMS45OTc3MDU5LDI0LjIyMzk3NjkgMzEuOTkxOTQ2OCwyMi45NDc5NDU0IEwzMS45OTE5NDY4LDE1Ljc1OTMwMTMgTDMxLjk5MTk0NjgsMTUuNzU5MzAxMyBMNDAsMTEuMTI2MDQ2IFoiLz48cGF0aCBmaWxsPSJ1cmwoI2cpIiBmaWxsLXJ1bGU9Im5vbnplcm8iIGQ9Ik0zMS45NzI2MTkzLDM0LjI0NzE1MTcgTDMxLjk3MjYxOTMsNDMuNDk0MzAzMyBMMjMuOTk2Nzc4NywzOC44ODA0MDcgTDIzLjk1MTY4MTEsMzguODgwNDA3IEwyMy45NTE2ODExLDMzLjA5MjA2NDMgQzIzLjk0OTk5MDYsMzIuMzgyODM4NiAyMy41NzExMTgxLDMxLjcyODI1NTMgMjIuOTU3NDgzNywzMS4zNzQzNzU5IEMyMi4zNDM4NDkzLDMxLjAyMDQ5NjUgMjEuNTg4NDQ3LDMxLjAyMDk0OTkgMjAuOTc1MjM2NiwzMS4zNzU1NjU4IEwyMi4xNzM1NDU0LDMwLjY4NTA5NDYgQzIzLjI3NDkxNzMsMzAuMDUyNzYwOCAyNC42Mjg0NDQ5LDMwLjA1Mjc2MDggMjUuNzI5ODE2OCwzMC42ODUwOTQ2IEwzMS45NzI2MTkzLDM0LjI0NzE1MTcgWiIvPjxwYXRoIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTI0LjQzNDg2MywyMi45NTQzOTg0IEwyNC40MzQ4NjMsMjcuMDMyNjk1NiBDMjQuNDMzNTAxNCwyNy40MDA2MDgzIDI0LjYyODkwNzcsMjcuNzQxMDkyMyAyNC45NDcwMDY0LDI3LjkyNTA2MzIgQzI1LjI2NTEwNTIsMjguMTA5MDM0MiAyNS42NTcxOTczLDI4LjEwODMyNyAyNS45NzQ2MzI2LDI3LjkyMzIwOTggTDI5LjUxMTU3NjQsMjUuODU4MjQ5MiBDMjkuODI2OTg0NywyNS42NzI4ODc4IDMwLjAyMDczNDQsMjUuMzM0MDIwNyAzMC4wMjA3MzQ0LDI0Ljk2NzczNSBDMzAuMDIwNzM0NCwyNC42MDE0NDkzIDI5LjgyNjk4NDcsMjQuMjYyNTgyMiAyOS41MTE1NzY0LDI0LjA3NzIyMDcgTDI1Ljk3NDYzMjYsMjIuMDU3NDMxMiBDMjUuNjU1NjcyNiwyMS44NzYwMzUgMjUuMjY0NTA0NCwyMS44NzgwNjc2IDI0Ljk0NzQ0MDYsMjIuMDYyNzY4NyBDMjQuNjMwMzc2OSwyMi4yNDc0Njk4IDI0LjQzNTE4MzMsMjIuNTg3MDE0MSAyNC40MzQ4NjMsMjIuOTU0Mzk4NCBaIi8+PHBhdGggZmlsbD0idXJsKCNoKSIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMjMuOTUxNjgxMSwxOC4zMzQwNDkxIEMyMy45NTM1MjIsMTkuNjEwNDQyIDIzLjI3NTgwOTQsMjAuNzkwOTkwMiAyMi4xNzM1NDU0LDIxLjQzMTQ5IEwxNi4wMTQ0OTU3LDI0Ljk5MzU0NyBMMTYuMDE0NDk1NywzNC4yNDcxNTE3IEwyMC45ODE2NzkxLDMxLjM2OTExMjggTDIyLjIyNTA4NTYsMzAuNjUyODI5NiBDMjIuNzU1NDE0NCwzMC4zNDkyMzQ0IDIzLjM1MzgwNzEsMzAuMTg0OTYzNiAyMy45NjQ1NjYxLDMwLjE3NTMwNzUgTDIzLjk1MTY4MTEsMTguMzM0MDQ5MSBaIi8+PC9nPjwvc3ZnPg==&labelColor=white
+[compshare-link]: https://www.compshare.cn/images-detail?ImageID=compshareImage-17jacgm4ju16
+
+<!-- 社区项目链接 -->
+[community-hivision-comfyui]: https://github.com/AIFSH/HivisionIDPhotos-ComfyUI
+[community-hivision-wechat]: https://github.com/no1xuan/HivisionIDPhotos-wechat-weapp
+[community-hivision-uniapp]: https://github.com/soulerror/HivisionIDPhotos-Uniapp
+[community-hivision-cpp]: https://github.com/zjkhahah/HivisionIDPhotos-cpp
+[community-hivision-windows-gui]: https://github.com/zhaoyun0071/HivisionIDPhotos-windows-GUI
+[community-hivision-nas]: https://github.com/ONG-Leo/HivisionIDPhotos-NAS
